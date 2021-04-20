@@ -1,0 +1,8 @@
+{
+  "include": ["src"],
+  "extends": "@ellreka/configs/tsconfig",
+  "compilerOptions": {
+    "outDir": "out",
+    "module": "commonJs"
+  }
+}

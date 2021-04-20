@@ -1,0 +1,33 @@
+{
+  "name": "tailwindcss-highlight",
+  "version": "1.0.0",
+  "main": "out/extension.js",
+  "license": "MIT",
+  "publisher": "ellreka",
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "language": "html",
+        "scopeName": "scope.html",
+        "path": "./src/theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "tsc -watch -p ./",
+    "vscode:prepublish": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@ellreka/configs": "^1.1.12",
+    "@types/vscode": "^1.55.0",
+    "eslint": "^7.24.0",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4"
+  }
+}
