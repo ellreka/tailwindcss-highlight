@@ -11,6 +11,23 @@
     "*"
   ],
   "contributes": {
+    "configuration": {
+      "title": "tailwind highlight",
+      "properties": {
+        "tailwind-highlight.languages": {
+          "default": [
+            "html",
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact"
+          ],
+          "title": "language",
+          "type": "array",
+          "markdownDescription": "uuuu"
+        }
+      }
+    },
     "grammars": [
       {
         "language": "html",
