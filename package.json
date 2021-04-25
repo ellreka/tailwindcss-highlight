@@ -12,9 +12,9 @@
   ],
   "contributes": {
     "configuration": {
-      "title": "tailwind highlight",
+      "title": "tailwindcss highlight",
       "properties": {
-        "tailwind-highlight.languages": {
+        "tailwindcss-highlight.languages": {
           "default": [
             "html",
             "javascript",
@@ -27,14 +27,7 @@
           "markdownDescription": "uuuu"
         }
       }
-    },
-    "grammars": [
-      {
-        "language": "html",
-        "scopeName": "scope.html",
-        "path": "./src/theme.json"
-      }
-    ]
+    }
   },
   "scripts": {
     "dev": "tsc -watch -p ./",

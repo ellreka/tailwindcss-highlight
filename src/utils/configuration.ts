@@ -19,21 +19,19 @@ export class Configuration {
   configuration: WorkspaceConfiguration
 
   constructor() {
-    this.configuration = workspace.getConfiguration('tailwind-highlight')
+    this.configuration = workspace.getConfiguration('tailwindcss-highlight')
   }
 
   get languages(): MyConfiguration['languages'] {
-    return this.configuration.get('languages') ?? []
+    return this.configuration.get('languages', [])
   }
 
   get utilities(): MyConfiguration['utilities'] {
-    return (
-      this.configuration.get('utilities') ?? {
-        padding: {
-          regex: '',
-          color: ''
-        }
+    return this.configuration.get('utilities', {
+      padding: {
+        regex: '',
+        color: ''
       }
-    )
+    })
   }
 }
