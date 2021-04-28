@@ -1,10 +1,11 @@
 import { workspace, WorkspaceConfiguration } from 'vscode'
 
-export type Utilities = 'padding'
+export type Utilities = 'padding' | 'margin' | 'border'
 
 export interface UtilityConfiguration {
-  color: string
-  regex: string
+  backgroundColor?: string
+  color?: string
+  regex: RegExp
 }
 
 export interface MyConfiguration {
@@ -29,8 +30,19 @@ export class Configuration {
   get utilities(): MyConfiguration['utilities'] {
     return this.configuration.get('utilities', {
       padding: {
-        regex: '',
-        color: ''
+        regex: /(|-)p(|t|b|r|l|x|y)-.*?(?=(\s|"|'))/,
+        color: 'black',
+        backgroundColor: 'rgb(187, 196, 136)'
+      },
+      margin: {
+        regex: /((|-)m(|t|b|r|l|x|y)-.*?(?=(\s|"|')))|((|-)space-.*?(x|y)-.*?(?=(\s|"|')))/,
+        color: 'black',
+        backgroundColor: 'rgb(173, 134, 91)'
+      },
+      border: {
+        regex: /border/,
+        color: 'black',
+        backgroundColor: 'rgb(222, 195, 138)'
       }
     })
   }

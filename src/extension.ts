@@ -7,7 +7,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
   const editor = window.activeTextEditor
   if (editor == null) return
   const config = new Configuration()
-  const decoration = new Decoration(editor)
+  const decoration = new Decoration(editor, config)
   console.log(config)
   decoration.update()
   window.onDidChangeActiveTextEditor(
