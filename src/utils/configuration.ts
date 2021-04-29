@@ -35,15 +35,25 @@ export class Configuration {
         backgroundColor: 'rgb(187, 196, 136)'
       },
       margin: {
-        regex: /((|-)m(|t|b|r|l|x|y)-.*?(?=(\s|"|')))|((|-)space-.*?(x|y)-.*?(?=(\s|"|')))/,
+        regex: /(|-)m(|t|b|r|l|x|y)-.*?(?=(\s|"|'))/,
+        color: 'black',
+        backgroundColor: 'rgb(173, 134, 91)'
+      },
+      space: {
+        regex: /(|-)space-.*?(x|y)-.*?(?=(\s|"|'))/,
         color: 'black',
         backgroundColor: 'rgb(173, 134, 91)'
       },
       border: {
-        regex: /border/,
+        regex: /border(|-).*?(?=(\s|"|'))/,
         color: 'black',
         backgroundColor: 'rgb(222, 195, 138)'
       }
+      // display: {
+      //   regex: /(block|inline|inline-block|flex|inline-flex|table|hidden)(?=(\s|"|'))/,
+      //   color: 'black',
+      //   backgroundColor: 'rgb(222, 195, 138)'
+      // }
     })
   }
 }

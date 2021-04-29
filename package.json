@@ -23,8 +23,7 @@
             "typescriptreact"
           ],
           "title": "language",
-          "type": "array",
-          "markdownDescription": "uuuu"
+          "type": "array"
         }
       }
     }
