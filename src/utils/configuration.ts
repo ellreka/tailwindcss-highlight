@@ -1,8 +1,13 @@
 import { workspace, WorkspaceConfiguration } from 'vscode'
 
-export type Utilities = 'padding' | 'margin' | 'border'
+export type Utilities = 'padding' | 'margin' | 'border' | 'space'
+// | 'text'
+// | 'font'
+// | 'display'
+// | 'width'
+// | 'height'
 
-export interface UtilityConfiguration {
+export interface Styles {
   backgroundColor?: string
   color?: string
   regex: RegExp
@@ -13,7 +18,8 @@ export interface MyConfiguration {
    * Configure a list of languages that should be highlight.
    */
   languages: string[]
-  utilities: Record<Utilities, UtilityConfiguration>
+  styles: Record<Utilities, Styles>
+  utilities: Utilities[]
 }
 
 export class Configuration {
@@ -28,24 +34,28 @@ export class Configuration {
   }
 
   get utilities(): MyConfiguration['utilities'] {
-    return this.configuration.get('utilities', {
+    return this.configuration.get('utilities', ['padding', 'margin', 'border'])
+  }
+
+  get styles(): MyConfiguration['styles'] {
+    return this.configuration.get('styles', {
       padding: {
-        regex: /(|-)p(|t|b|r|l|x|y)-.*?(?=(\s|"|'))/,
+        regex: /(?<=[\s'"])(|-)p(|t|b|r|l|x|y)-[^'"\s]+/,
         color: 'black',
         backgroundColor: 'rgb(187, 196, 136)'
       },
       margin: {
-        regex: /(|-)m(|t|b|r|l|x|y)-.*?(?=(\s|"|'))/,
+        regex: /(?<=[\s'"])(|-)m(|t|b|r|l|x|y)-[^'"\s]+/,
         color: 'black',
         backgroundColor: 'rgb(173, 134, 91)'
       },
       space: {
-        regex: /(|-)space-.*?(x|y)-.*?(?=(\s|"|'))/,
+        regex: /(?<=[\s'"])(|-)space-(x|y)-[^'"\s]+/,
         color: 'black',
         backgroundColor: 'rgb(173, 134, 91)'
       },
       border: {
-        regex: /border(|-).*?(?=(\s|"|'))/,
+        regex: /(?<=[\s'"])border(|-)[^'"\s]+/,
         color: 'black',
         backgroundColor: 'rgb(222, 195, 138)'
       }

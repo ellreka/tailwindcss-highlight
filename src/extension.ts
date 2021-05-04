@@ -13,6 +13,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
   window.onDidChangeActiveTextEditor(
     (editor) => {
       if (editor != null) {
+        const decoration = new Decoration(editor, config)
         decoration.update()
       }
     },
@@ -29,3 +30,8 @@ export async function activate(context: ExtensionContext): Promise<void> {
     context.subscriptions
   )
 }
+
+// export function deactivate() {
+//   const decoration = new Decoration(editor, config)
+//   decoration.dispose()
+// }

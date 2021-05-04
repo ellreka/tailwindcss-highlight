@@ -15,12 +15,12 @@ export class Decoration {
   constructor(editor: TextEditor, config: MyConfiguration) {
     this.editor = editor
     this.timer = undefined
-    this.decorators = Object.entries(config.utilities).map((utility) => {
+    this.decorators = Object.entries(config.styles).map((style) => {
       return {
-        regex: utility[1].regex,
+        regex: style[1].regex,
         decorator: window.createTextEditorDecorationType({
-          color: utility[1].color,
-          backgroundColor: utility[1].backgroundColor
+          color: style[1].color,
+          backgroundColor: style[1].backgroundColor
         })
       }
     })
@@ -50,5 +50,11 @@ export class Decoration {
       this.timer = undefined
     }
     this.timer = setTimeout(() => this.decorate(), 500)
+  }
+
+  dispose(): void {
+    this.decorators.forEach((decorator) => {
+      decorator.decorator.dispose()
+    })
   }
 }
