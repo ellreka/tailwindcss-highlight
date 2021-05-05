@@ -41,12 +41,12 @@ export class Configuration {
   get styles(): MyConfiguration['styles'] {
     return this.configuration.get('styles', {
       padding: {
-        regex: /(|-)p(|t|b|r|l|x|y)-[^'"\s]+/,
+        regex: /\b(|-)p(|t|b|r|l|x|y)-[^'"\s]+/,
         color: 'black',
         backgroundColor: 'rgb(187, 196, 136)'
       },
       margin: {
-        regex: /(|-)m(|t|b|r|l|x|y)-[^'"\s]+/,
+        regex: /\b(|-)m(|t|b|r|l|x|y)-[^'"\s]+/,
         color: 'black',
         backgroundColor: 'rgb(173, 134, 91)'
       }
