@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@ellreka/configs": "1.1.12",
-    "@types/node": "15.0.1",
+    "@types/node": "15.0.2",
     "@types/vscode": "1.55.0",
     "eslint": "7.25.0",
     "prettier": "2.2.1",
