@@ -30,15 +30,25 @@ export class Decoration {
     const document = this.editor.document
     const text = document.getText()
     this.decorators.forEach((decorator) => {
-      const regex = new RegExp(decorator.regex, 'g')
-      const matches = text.matchAll(regex)
+      const classNameRegex = new RegExp(
+        /\b(?<=(class|className)=("|'|{`)).*?(?="|'|`})\b/, // \b(?<=(class|className)=("|'|{`|{clsx\(["'`])).*?(?="|'|`})\b
+        'g'
+      )
+      const classNameMatches = text.matchAll(classNameRegex)
       const chars: DecorationOptions[] = []
-      for (const match of matches) {
-        if (match.index == null) return
-        const start = document.positionAt(match.index)
-        const end = document.positionAt(match.index + match[0].length)
-        const range = new Range(start, end)
-        chars.push({ range })
+      for (const classNameMatch of classNameMatches) {
+        const regex = new RegExp(decorator.regex, 'g')
+        const matches = classNameMatch[0].matchAll(regex)
+        for (const match of matches) {
+          if (match.index == null) return
+          if (classNameMatch.index == null) return
+          const start = document.positionAt(classNameMatch.index + match.index)
+          const end = document.positionAt(
+            classNameMatch.index + match.index + match[0].length
+          )
+          const range = new Range(start, end)
+          chars.push({ range })
+        }
       }
       this.editor.setDecorations(decorator.decorator, chars)
     })
