@@ -4,28 +4,20 @@ import { Configuration } from './utils/configuration'
 import { Decoration } from './utils/decoration'
 
 export async function activate(context: ExtensionContext): Promise<void> {
-  const editor = window.activeTextEditor
-  if (editor == null) return
   const configuration = new Configuration()
   console.log(configuration)
   const decoration = new Decoration(configuration)
-  decoration.update(editor)
+  decoration.update()
   window.onDidChangeActiveTextEditor(
     (editor) => {
-      if (editor != null) {
-        decoration.update(editor)
-      }
+      decoration.update()
     },
     null,
     context.subscriptions
   )
   workspace.onDidChangeTextDocument(
     (event) => {
-      if (editor.document.version === event.document.version) {
-        const editor = window.activeTextEditor
-        if (editor == null) return
-        decoration.update(editor)
-      }
+      decoration.update()
     },
     null,
     context.subscriptions

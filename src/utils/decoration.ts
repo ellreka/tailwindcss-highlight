@@ -1,7 +1,6 @@
 import {
   DecorationOptions,
   Range,
-  TextEditor,
   TextEditorDecorationType,
   window
 } from 'vscode'
@@ -9,11 +8,9 @@ import {
 import { MyConfiguration } from './configuration'
 
 export class Decoration {
-  editor: TextEditor | undefined
   timer: NodeJS.Timer | undefined
   decorators: Array<{ decorator: TextEditorDecorationType; regex: string }>
   constructor(configuration: MyConfiguration) {
-    this.editor = undefined
     this.timer = undefined
     this.decorators = Object.entries(configuration.configs)
       .filter((config) => configuration.utilities.includes(config[0]))
@@ -29,8 +26,9 @@ export class Decoration {
   }
 
   private decorate(): void {
-    if (this.editor == null) return
-    const document = this.editor.document
+    const editor = window.activeTextEditor
+    if (editor == null) return
+    const document = editor.document
     const text = document.getText()
     this.decorators.forEach((decorator) => {
       const classNameRegex = new RegExp(
@@ -54,17 +52,18 @@ export class Decoration {
           chars.push({ range })
         }
       }
-      this.editor?.setDecorations(decorator.decorator, chars)
+      editor.setDecorations(decorator.decorator, chars)
     })
   }
 
-  update(editor: TextEditor): void {
+  update(): void {
     if (this.timer != null) {
       clearTimeout(this.timer)
       this.timer = undefined
     }
-    this.editor = editor
-    this.timer = setTimeout(() => this.decorate(), 500)
+    this.timer = setTimeout(() => {
+      this.decorate()
+    }, 500)
   }
 
   dispose(): void {

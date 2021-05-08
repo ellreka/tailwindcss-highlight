@@ -32,7 +32,8 @@
         "tailwindcss-highlight.utilities": {
           "default": [
             "padding",
-            "margin"
+            "margin",
+            "space"
           ],
           "title": "utilities",
           "type": "array"
@@ -46,6 +47,11 @@
             },
             "margin": {
               "regex": "\\b(|-)m(|t|b|r|l|x|y)-[^'\"\\s]+",
+              "color": "black",
+              "backgroundColor": "rgb(173, 134, 91)"
+            },
+            "space": {
+              "regex": "\\b(|-)space-(x|y)-[^'\"\\s]+",
               "color": "black",
               "backgroundColor": "rgb(173, 134, 91)"
             }
