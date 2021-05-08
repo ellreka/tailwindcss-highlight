@@ -8,18 +8,18 @@ export type Utilities = 'padding' | 'margin'
 // | 'width'
 // | 'height'
 
-export interface Styles {
+export interface Configs {
   backgroundColor?: string
   color?: string
-  regex: RegExp
+  regex: string
 }
 
 export interface MyConfiguration {
+  configs: Record<Utilities, Configs> | {}
   /**
    * Configure a list of languages that should be highlight.
    */
   languages: string[]
-  styles: Record<Utilities, Styles>
   utilities: Utilities[]
 }
 
@@ -35,36 +35,26 @@ export class Configuration {
   }
 
   get utilities(): MyConfiguration['utilities'] {
-    return this.configuration.get('utilities', ['padding', 'margin'])
+    return this.configuration.get('utilities', [])
   }
 
-  get styles(): MyConfiguration['styles'] {
-    return this.configuration.get('styles', {
-      padding: {
-        regex: /\b(|-)p(|t|b|r|l|x|y)-[^'"\s]+/,
-        color: 'black',
-        backgroundColor: 'rgb(187, 196, 136)'
-      },
-      margin: {
-        regex: /\b(|-)m(|t|b|r|l|x|y)-[^'"\s]+/,
-        color: 'black',
-        backgroundColor: 'rgb(173, 134, 91)'
-      }
-      // space: {
-      //   regex: /(?<=[\s'"])(|-)space-(x|y)-[^'"\s]+/,
-      //   color: 'black',
-      //   backgroundColor: 'rgb(173, 134, 91)'
-      // },
-      // border: {
-      //   regex: /(?<=[\s'"])border(|-)[^'"\s]+/,
-      //   color: 'black',
-      //   backgroundColor: 'rgb(222, 195, 138)'
-      // }
-      // display: {
-      //   regex: /(block|inline|inline-block|flex|inline-flex|table|hidden)(?=(\s|"|'))/,
-      //   color: 'black',
-      //   backgroundColor: 'rgb(222, 195, 138)'
-      // }
-    })
+  get configs(): MyConfiguration['configs'] {
+    return this.configuration.get('configs', {})
   }
 }
+
+// space: {
+//   regex: /(?<=[\s'"])(|-)space-(x|y)-[^'"\s]+/,
+//   color: 'black',
+//   backgroundColor: 'rgb(173, 134, 91)'
+// },
+// border: {
+//   regex: /(?<=[\s'"])border(|-)[^'"\s]+/,
+//   color: 'black',
+//   backgroundColor: 'rgb(222, 195, 138)'
+// }
+// display: {
+//   regex: /(block|inline|inline-block|flex|inline-flex|table|hidden)(?=(\s|"|'))/,
+//   color: 'black',
+//   backgroundColor: 'rgb(222, 195, 138)'
+// }

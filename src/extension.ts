@@ -6,15 +6,14 @@ import { Decoration } from './utils/decoration'
 export async function activate(context: ExtensionContext): Promise<void> {
   const editor = window.activeTextEditor
   if (editor == null) return
-  const config = new Configuration()
-  const decoration = new Decoration(editor, config)
-  console.log(config)
-  decoration.update()
+  const configuration = new Configuration()
+  console.log(configuration)
+  const decoration = new Decoration(configuration)
+  decoration.update(editor)
   window.onDidChangeActiveTextEditor(
     (editor) => {
       if (editor != null) {
-        const decoration = new Decoration(editor, config)
-        decoration.update()
+        decoration.update(editor)
       }
     },
     null,
@@ -23,7 +22,9 @@ export async function activate(context: ExtensionContext): Promise<void> {
   workspace.onDidChangeTextDocument(
     (event) => {
       if (editor.document.version === event.document.version) {
-        decoration.update()
+        const editor = window.activeTextEditor
+        if (editor == null) return
+        decoration.update(editor)
       }
     },
     null,

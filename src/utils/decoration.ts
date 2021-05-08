@@ -9,24 +9,25 @@ import {
 import { MyConfiguration } from './configuration'
 
 export class Decoration {
-  editor: TextEditor
+  editor: TextEditor | undefined
   timer: NodeJS.Timer | undefined
-  decorators: Array<{ decorator: TextEditorDecorationType; regex: RegExp }>
-  constructor(editor: TextEditor, config: MyConfiguration) {
-    this.editor = editor
+  decorators: Array<{ decorator: TextEditorDecorationType; regex: string }>
+  constructor(configuration: MyConfiguration) {
+    this.editor = undefined
     this.timer = undefined
-    this.decorators = Object.entries(config.styles).map((style) => {
+    this.decorators = Object.entries(configuration.configs).map((config) => {
       return {
-        regex: style[1].regex,
+        regex: config[1].regex,
         decorator: window.createTextEditorDecorationType({
-          color: style[1].color,
-          backgroundColor: style[1].backgroundColor
+          color: config[1].color,
+          backgroundColor: config[1].backgroundColor
         })
       }
     })
   }
 
   private decorate(): void {
+    if (this.editor == null) return
     const document = this.editor.document
     const text = document.getText()
     this.decorators.forEach((decorator) => {
@@ -50,15 +51,16 @@ export class Decoration {
           chars.push({ range })
         }
       }
-      this.editor.setDecorations(decorator.decorator, chars)
+      this.editor?.setDecorations(decorator.decorator, chars)
     })
   }
 
-  update(): void {
+  update(editor: TextEditor): void {
     if (this.timer != null) {
       clearTimeout(this.timer)
       this.timer = undefined
     }
+    this.editor = editor
     this.timer = setTimeout(() => this.decorate(), 500)
   }
 

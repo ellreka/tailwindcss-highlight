@@ -28,6 +28,30 @@
           ],
           "title": "language",
           "type": "array"
+        },
+        "tailwindcss-highlight.utilities": {
+          "default": [
+            "padding",
+            "margin"
+          ],
+          "title": "utilities",
+          "type": "array"
+        },
+        "tailwindcss-highlight.configs": {
+          "default": {
+            "padding": {
+              "regex": "\\b(|-)p(|t|b|r|l|x|y)-[^'\"\\s]+",
+              "color": "black",
+              "backgroundColor": "rgb(187, 196, 136)"
+            },
+            "margin": {
+              "regex": "\\b(|-)m(|t|b|r|l|x|y)-[^'\"\\s]+",
+              "color": "black",
+              "backgroundColor": "rgb(173, 134, 91)"
+            }
+          },
+          "title": "configs",
+          "type": "object"
         }
       }
     }
