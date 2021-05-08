@@ -23,7 +23,7 @@ Please run debug mode on the vscode.
 ### Languages
 
 ```json
-tailwindcss-highlight.languages: [
+"tailwindcss-highlight.languages": [
   "html",
   "javascript",
   "javascriptreact",
@@ -35,7 +35,7 @@ tailwindcss-highlight.languages: [
 ### Utilities
 
 ```json
-tailwindcss-highlight.utilities: [
+"tailwindcss-highlight.utilities": [
   "padding",
   "margin",
   "space"
@@ -46,12 +46,13 @@ tailwindcss-highlight.utilities: [
 ### Configs
 
 ```json
-tailwindcss-highlight.configs: {
+"tailwindcss-highlight.configs": {
   "padding": {
     "regex": "\\b(|-)p(|t|b|r|l|x|y)-[^'\"\\s]+",
     "color": "black",
     "backgroundColor": "rgb(187, 196, 136)"
-  }
+  },
+  ...
 }
 ```
 
