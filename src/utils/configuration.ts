@@ -1,13 +1,6 @@
 import { workspace, WorkspaceConfiguration } from 'vscode'
 
-export type Utilities = 'padding' | 'margin'
-// | 'border' | 'space'
-// | 'text'
-// | 'font'
-// | 'display'
-// | 'width'
-// | 'height'
-
+export type Utilities = string
 export interface Configs {
   backgroundColor?: string
   color?: string

@@ -15,15 +15,17 @@ export class Decoration {
   constructor(configuration: MyConfiguration) {
     this.editor = undefined
     this.timer = undefined
-    this.decorators = Object.entries(configuration.configs).map((config) => {
-      return {
-        regex: config[1].regex,
-        decorator: window.createTextEditorDecorationType({
-          color: config[1].color,
-          backgroundColor: config[1].backgroundColor
-        })
-      }
-    })
+    this.decorators = Object.entries(configuration.configs)
+      .filter((config) => configuration.utilities.includes(config[0]))
+      .map((config) => {
+        return {
+          regex: config[1].regex,
+          decorator: window.createTextEditorDecorationType({
+            color: config[1].color,
+            backgroundColor: config[1].backgroundColor
+          })
+        }
+      })
   }
 
   private decorate(): void {
@@ -32,7 +34,8 @@ export class Decoration {
     const text = document.getText()
     this.decorators.forEach((decorator) => {
       const classNameRegex = new RegExp(
-        /\b(?<=(class|className)=("|'|{`)).*?(?="|'|`})\b/, // \b(?<=(class|className)=("|'|{`|{clsx\(["'`])).*?(?="|'|`})\b
+        // TODO: 正規表現が曖昧
+        /\b(?<=(class|className)=("|'|{)).*?(?="|'|})\b/,
         'g'
       )
       const classNameMatches = text.matchAll(classNameRegex)
