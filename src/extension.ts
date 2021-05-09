@@ -5,7 +5,6 @@ import { Decoration } from './utils/decoration'
 
 export async function activate(context: ExtensionContext): Promise<void> {
   const configuration = new Configuration()
-  console.log(configuration)
   const decoration = new Decoration(configuration)
   decoration.update()
   window.onDidChangeActiveTextEditor(
@@ -24,7 +23,8 @@ export async function activate(context: ExtensionContext): Promise<void> {
   )
 }
 
-// export function deactivate() {
-//   const decoration = new Decoration(editor, config)
-//   decoration.dispose()
-// }
+export async function deactivate(): Promise<void> {
+  const configuration = new Configuration()
+  const decoration = new Decoration(configuration)
+  decoration.dispose()
+}

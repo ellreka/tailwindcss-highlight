@@ -32,7 +32,7 @@ export class Decoration {
     const text = document.getText()
     this.decorators.forEach((decorator) => {
       const classNameRegex = new RegExp(
-        /(?:\bclass(?:Name)?\s*=\s*(?:{([\w\d\s_\-:/${}()[\]"'`,]+)})|(["'`][\w\d\s_\-:/]+["'`]))|(?:\btw\s*(`[\w\d\s_\-:/]+`))/, // \b(?<=(class|className)=("|'|{`|{)).+?(?="|'|}|`})\b
+        /(?:\bclass(?:Name)?\s*=\s*(?:{([\w\d\s_\-:/${}()[\]"'`,]+)})|(["'`][\w\d\s_\-:/]+["'`]))|(?:\btw\s*(`[\w\d\s_\-:/]+`))/,
         'g'
       )
       const classNameMatches = text.matchAll(classNameRegex)
