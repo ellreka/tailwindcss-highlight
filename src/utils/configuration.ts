@@ -35,19 +35,3 @@ export class Configuration {
     return this.configuration.get('configs', {})
   }
 }
-
-// space: {
-//   regex: /(?<=[\s'"])(|-)space-(x|y)-[^'"\s]+/,
-//   color: 'black',
-//   backgroundColor: 'rgb(173, 134, 91)'
-// },
-// border: {
-//   regex: /(?<=[\s'"])border(|-)[^'"\s]+/,
-//   color: 'black',
-//   backgroundColor: 'rgb(222, 195, 138)'
-// }
-// display: {
-//   regex: /(block|inline|inline-block|flex|inline-flex|table|hidden)(?=(\s|"|'))/,
-//   color: 'black',
-//   backgroundColor: 'rgb(222, 195, 138)'
-// }

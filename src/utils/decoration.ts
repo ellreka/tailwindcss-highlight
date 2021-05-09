@@ -32,24 +32,37 @@ export class Decoration {
     const text = document.getText()
     this.decorators.forEach((decorator) => {
       const classNameRegex = new RegExp(
-        // TODO: 正規表現が曖昧
-        /\b(?<=(class|className)=("|'|{)).*?(?="|'|})\b/,
+        /(?:\bclass(?:Name)?\s*=\s*(?:{([\w\d\s_\-:/${}()[\]"'`,]+)})|(["'`][\w\d\s_\-:/]+["'`]))|(?:\btw\s*(`[\w\d\s_\-:/]+`))/, // \b(?<=(class|className)=("|'|{`|{)).+?(?="|'|}|`})\b
         'g'
       )
       const classNameMatches = text.matchAll(classNameRegex)
       const chars: DecorationOptions[] = []
       for (const classNameMatch of classNameMatches) {
-        const regex = new RegExp(decorator.regex, 'g')
-        const matches = classNameMatch[0].matchAll(regex)
-        for (const match of matches) {
-          if (match.index == null) return
-          if (classNameMatch.index == null) return
-          const start = document.positionAt(classNameMatch.index + match.index)
-          const end = document.positionAt(
-            classNameMatch.index + match.index + match[0].length
-          )
-          const range = new Range(start, end)
-          chars.push({ range })
+        const stringRegex = new RegExp(
+          /(?:["'`]([\w\d\s_\-:/${}()[\]"']+)["'`])/,
+          'g'
+        )
+        const stringMatches = classNameMatch[0].matchAll(stringRegex)
+        for (const stringMatch of stringMatches) {
+          if (stringMatch == null) return
+          const regex = new RegExp(decorator.regex, 'g')
+          const matches = classNameMatch[0].matchAll(regex)
+          for (const match of matches) {
+            if (
+              match.index == null ||
+              classNameMatch.index == null ||
+              stringMatch.index == null
+            )
+              return
+            const start = document.positionAt(
+              classNameMatch.index + match.index
+            )
+            const end = document.positionAt(
+              classNameMatch.index + match.index + match[0].length
+            )
+            const range = new Range(start, end)
+            chars.push({ range })
+          }
         }
       }
       editor.setDecorations(decorator.decorator, chars)
