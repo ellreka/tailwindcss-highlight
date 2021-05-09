@@ -17,10 +17,7 @@ export class Decoration {
       .map((config) => {
         return {
           regex: config[1].regex,
-          decorator: window.createTextEditorDecorationType({
-            color: config[1].color,
-            backgroundColor: config[1].backgroundColor
-          })
+          decorator: window.createTextEditorDecorationType(config[1].options)
         }
       })
   }

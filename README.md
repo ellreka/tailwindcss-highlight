@@ -42,17 +42,17 @@ Please run debug mode on the vscode.
 ]
 ```
 
-
 ### Configs
 
 ```json
 "tailwindcss-highlight.configs": {
   "padding": {
     "regex": "\\b(|-)p(|t|b|r|l|x|y)-[^'\"\\s]+",
-    "color": "black",
-    "backgroundColor": "rgb(187, 196, 136)"
-  },
-  ...
+    "options": {
+      "color": "black",
+      "backgroundColor": "rgb(187, 196, 136)"
+    }
+  }
 }
 ```
 

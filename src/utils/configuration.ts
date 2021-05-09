@@ -1,9 +1,12 @@
-import { workspace, WorkspaceConfiguration } from 'vscode'
+import {
+  DecorationRenderOptions,
+  workspace,
+  WorkspaceConfiguration
+} from 'vscode'
 
 export type Utilities = string
 export interface Configs {
-  backgroundColor?: string
-  color?: string
+  options: DecorationRenderOptions
   regex: string
 }
 
