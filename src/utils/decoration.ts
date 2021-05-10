@@ -1,6 +1,7 @@
 import {
   DecorationOptions,
   Range,
+  TextEditor,
   TextEditorDecorationType,
   window
 } from 'vscode'
@@ -9,9 +10,11 @@ import { MyConfiguration } from './configuration'
 
 export class Decoration {
   timer: NodeJS.Timer | undefined
+  configuration: MyConfiguration
   decorators: Array<{ decorator: TextEditorDecorationType; regex: string }>
   constructor(configuration: MyConfiguration) {
     this.timer = undefined
+    this.configuration = configuration
     this.decorators = Object.entries(configuration.configs)
       .filter((config) => configuration.utilities.includes(config[0]))
       .map((config) => {
@@ -22,8 +25,7 @@ export class Decoration {
       })
   }
 
-  private decorate(): void {
-    const editor = window.activeTextEditor
+  private decorate(editor: TextEditor): void {
     if (editor == null) return
     const document = editor.document
     const text = document.getText()
@@ -67,12 +69,16 @@ export class Decoration {
   }
 
   update(): void {
+    const editor = window.activeTextEditor
+    if (editor == null) return
+    const languageId = editor.document.languageId
+    if (!this.configuration.languages.includes(languageId)) return
     if (this.timer != null) {
       clearTimeout(this.timer)
       this.timer = undefined
     }
     this.timer = setTimeout(() => {
-      this.decorate()
+      this.decorate(editor)
     }, 500)
   }
 
