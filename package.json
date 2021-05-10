@@ -44,42 +44,42 @@
         "tailwindcss-highlight.configs": {
           "default": {
             "padding": {
-              "regex": "(?<=[`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+",
+              "regex": "(?<=[:`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
                 "backgroundColor": "rgb(187, 196, 136)"
               }
             },
             "margin": {
-              "regex": "(?<=[`'\"\\s])(|-)m(|t|b|r|l|x|y)-[^`'\"\\s]+",
+              "regex": "(?<=[:`'\"\\s])(|-)m(|t|b|r|l|x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
                 "backgroundColor": "rgb(173, 134, 91)"
               }
             },
             "space": {
-              "regex": "(?<=[`'\"\\s])(|-)space-(x|y)-[^`'\"\\s]+",
+              "regex": "(?<=[:`'\"\\s])(|-)space-(x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
                 "backgroundColor": "rgb(173, 134, 91)"
               }
             },
             "border": {
-              "regex": "(?<=[`'\"\\s])border(|-)[^`'\"\\s]*",
+              "regex": "(?<=[:`'\"\\s])border(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
                 "backgroundColor": "rgb(222, 195, 138)"
               }
             },
             "width": {
-              "regex": "(?<=[`'\"\\s])(|-)(|max|min)(|-)w-[^`'\"\\s]*",
+              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)w-[^`'\"\\s]*",
               "options": {
                 "color": "black",
                 "backgroundColor": "rgb(83, 163, 82)"
               }
             },
             "height": {
-              "regex": "(?<=[`'\"\\s])(|-)(|max|min)(|-)h-[^`'\"\\s]*",
+              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)h-[^`'\"\\s]*",
               "options": {
                 "color": "black",
                 "backgroundColor": "rgb(227, 173, 79)"

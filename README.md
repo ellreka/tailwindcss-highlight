@@ -47,7 +47,7 @@ Please run debug mode on the vscode.
 ```json
 "tailwindcss-highlight.configs": {
   "padding": {
-    "regex": "\\b(|-)p(|t|b|r|l|x|y)-[^'\"\\s]+",
+    "regex": "(?<=[:`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+",
     "options": {
       "color": "black",
       "backgroundColor": "rgb(187, 196, 136)"
