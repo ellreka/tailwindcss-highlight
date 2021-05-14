@@ -47,42 +47,56 @@
               "regex": "(?<=[:`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "rgb(187, 196, 136)"
+                "backgroundColor": "#BBC488"
               }
             },
             "margin": {
               "regex": "(?<=[:`'\"\\s])(|-)m(|t|b|r|l|x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "rgb(173, 134, 91)"
+                "backgroundColor": "#AD865B"
               }
             },
             "space": {
               "regex": "(?<=[:`'\"\\s])(|-)space-(x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "rgb(173, 134, 91)"
+                "backgroundColor": "#AD865B"
               }
             },
             "border": {
               "regex": "(?<=[:`'\"\\s])border(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "rgb(222, 195, 138)"
+                "backgroundColor": "#DEC38A"
               }
             },
             "width": {
               "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)w-[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "rgb(83, 163, 82)"
+                "backgroundColor": "#a0cade"
               }
             },
             "height": {
               "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)h-[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "rgb(227, 173, 79)"
+                "backgroundColor": "#e6b1a1"
+              }
+            },
+            "flex": {
+              "regex": "(?<=[:`'\"\\s])flex(|-)[^`'\"\\s]*",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#EF9A9A"
+              }
+            },
+            "grid": {
+              "regex": "(?<=[:`'\"\\s])grid(|-)[^`'\"\\s]*",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
               }
             }
           },
