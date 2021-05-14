@@ -8,6 +8,10 @@
     "type": "git",
     "url": "https://github.com/ellreka/tailwindcss-highlight.git"
   },
+  "keywords": [
+    "tailwindcss"
+  ],
+  "icon": "./assets/icon.png",
   "engines": {
     "vscode": "^1.55.0"
   },
@@ -110,6 +114,7 @@
     "dev": "tsc -watch -p ./",
     "package": "vsce package",
     "vscode:prepublish": "tsc -p ./",
+    "publish": "vsce publish",
     "test": "jest"
   },
   "devDependencies": {
