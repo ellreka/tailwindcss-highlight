@@ -6,13 +6,7 @@ This extension highlights the utilities of TailwindCSS.
 
 ## Installation
 
-This extension is still under development, so you will need to build and install it yourself.
-
-```bash
-yarn
-yarn package
-code --install-extension tailwindcss-highlight-1.0.0.vsix
-```
+https://marketplace.visualstudio.com/items?itemName=ellreka.tailwindcss-highlight
 
 ## Development
 
