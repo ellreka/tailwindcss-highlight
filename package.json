@@ -28,7 +28,8 @@
             "javascript",
             "javascriptreact",
             "typescript",
-            "typescriptreact"
+            "typescriptreact",
+            "vue"
           ],
           "title": "language",
           "type": "array"
@@ -39,8 +40,36 @@
             "margin",
             "space",
             "border",
+            "divide",
+            "ring",
             "width",
-            "height"
+            "height",
+            "flex",
+            "grid",
+            "order",
+            "gridColumn",
+            "gridRow",
+            "gridAutoColumns",
+            "gridAutoRows",
+            "gap",
+            "justifyContent",
+            "justifyItems",
+            "justifySelf",
+            "alignContent",
+            "alignItems",
+            "alignSelf",
+            "placeContent",
+            "placeItems",
+            "placeSelf",
+            "table",
+            "transition",
+            "animation",
+            "transform",
+            "transformOrigin",
+            "scale",
+            "rotate",
+            "translate",
+            "skew"
           ],
           "title": "utilities",
           "type": "array"
@@ -116,13 +145,174 @@
                 "color": "black",
                 "backgroundColor": "#B39DDB"
               }
-            }
-          },
-          "table": {
-            "regex": "(?<=[:`'\"\\s])(table(|-auto|-fixed)|border-(collapse|separate))[^`'\"\\s]",
-            "options": {
-              "color": "black",
-              "backgroundColor": "#FFB300"
+            },
+            "order": {
+              "regex": "(?<=[:`'\"\\s])order(|-)[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "gridColumn": {
+              "regex": "(?<=[:`'\"\\s])col(|-)[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "gridRow": {
+              "regex": "(?<=[:`'\"\\s])row(|-)[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "gridAutoColumns": {
+              "regex": "(?<=[:`'\"\\s])auto-cols-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "gridAutoRows": {
+              "regex": "(?<=[:`'\"\\s])auto-rows-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "gap": {
+              "regex": "(?<=[:`'\"\\s])gap-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "justifyContent": {
+              "regex": "(?<=[:`'\"\\s])justify-(start|end|center|between|around|evenly)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "justifyItems": {
+              "regex": "(?<=[:`'\"\\s])justify-items-(start|end|center|stretch)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "justifySelf": {
+              "regex": "(?<=[:`'\"\\s])justify-self-(auto|start|end|center|stretch)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "alignContent": {
+              "regex": "(?<=[:`'\"\\s])content-(start|end|center|between|around|evenly)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "alignItems": {
+              "regex": "(?<=[:`'\"\\s])items-(start|end|center|baseline|stretch)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "alignSelf": {
+              "regex": "(?<=[:`'\"\\s])self-(auto|start|end|stretch)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "placeContent": {
+              "regex": "(?<=[:`'\"\\s])place-content-(center|start|end|between|around|evenly|stretch)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "placeItems": {
+              "regex": "(?<=[:`'\"\\s])place-items-(start|end|center|stretch)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "placeSelf": {
+              "regex": "(?<=[:`'\"\\s])place-self-(auto|start|end|center|stretch)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#B39DDB"
+              }
+            },
+            "table": {
+              "regex": "(?<=[:`'\"\\s])(table(|-auto|-fixed)|border-(collapse|separate))[^`'\"\\s]",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FFB300"
+              }
+            },
+            "transition": {
+              "regex": "(?<=[:`'\"\\s])(transition|duration|ease|delay)(|-)[^`'\"\\s]*",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FF80AB"
+              }
+            },
+            "animation": {
+              "regex": "(?<=[:`'\"\\s])animation(|-)[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FF80AB"
+              }
+            },
+            "transform": {
+              "regex": "(?<=[:`'\"\\s])transform(|-)[^`'\"\\s]*",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FF80AB"
+              }
+            },
+            "transformOrigin": {
+              "regex": "(?<=[:`'\"\\s])origin-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FF80AB"
+              }
+            },
+            "scale": {
+              "regex": "(?<=[:`'\"\\s])(|-)scale-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FF80AB"
+              }
+            },
+            "rotate": {
+              "regex": "(?<=[:`'\"\\s])(|-)rotate-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FF80AB"
+              }
+            },
+            "translate": {
+              "regex": "(?<=[:`'\"\\s])(|-)translate-(x|y)-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FF80AB"
+              }
+            },
+            "skew": {
+              "regex": "(?<=[:`'\"\\s])(|-)skew-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FF80AB"
+              }
             }
           },
           "title": "configs",
