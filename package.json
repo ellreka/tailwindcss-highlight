@@ -69,21 +69,35 @@
               }
             },
             "border": {
-              "regex": "(?<=[:`'\"\\s])border(|-)[^`'\"\\s]*",
+              "regex": "(?<=[:`'\"\\s])border(?!-collapse|-separate)(|-)[^`'\"\\s]*",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#DEC38A"
+              }
+            },
+            "divide": {
+              "regex": "(?<=[:`'\"\\s])divide-(x|y)(|-)[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#DEC38A"
+              }
+            },
+            "ring": {
+              "regex": "(?<=[:`'\"\\s])ring(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
                 "backgroundColor": "#DEC38A"
               }
             },
             "width": {
-              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)w-[^`'\"\\s]*",
+              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)w-[^`'\"\\s]+",
               "options": {
                 "color": "black",
                 "backgroundColor": "#a0cade"
               }
             },
             "height": {
-              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)h-[^`'\"\\s]*",
+              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)h-[^`'\"\\s]+",
               "options": {
                 "color": "black",
                 "backgroundColor": "#e6b1a1"
@@ -93,7 +107,7 @@
               "regex": "(?<=[:`'\"\\s])flex(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#EF9A9A"
+                "backgroundColor": "#B39DDB"
               }
             },
             "grid": {
@@ -102,6 +116,13 @@
                 "color": "black",
                 "backgroundColor": "#B39DDB"
               }
+            }
+          },
+          "table": {
+            "regex": "(?<=[:`'\"\\s])(table(|-auto|-fixed)|border-(collapse|separate))[^`'\"\\s]",
+            "options": {
+              "color": "black",
+              "backgroundColor": "#FFB300"
             }
           },
           "title": "configs",
