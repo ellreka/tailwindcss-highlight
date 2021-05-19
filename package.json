@@ -357,7 +357,7 @@
     "dev": "tsc -watch -p ./",
     "package": "vsce package",
     "vscode:prepublish": "tsc -p ./",
-    "publish": "vsce publish",
+    "vscode:publish": "vsce publish",
     "test": "jest"
   },
   "devDependencies": {
