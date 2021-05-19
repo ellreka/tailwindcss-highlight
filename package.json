@@ -13,7 +13,7 @@
   ],
   "icon": "assets/icon.png",
   "engines": {
-    "vscode": "^1.55.0"
+    "vscode": "^1.56.0"
   },
   "activationEvents": [
     "*"
