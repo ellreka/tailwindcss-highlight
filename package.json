@@ -62,7 +62,11 @@
             "placeItems",
             "placeSelf",
             "table",
+            "borderCollapse",
             "transition",
+            "transitionDuration",
+            "transitionTimingFunction",
+            "transitionDelay",
             "animation",
             "transform",
             "transformOrigin",
@@ -269,28 +273,28 @@
               "regex": "(?<=[:`'\"\\s])transition(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FF80AB"
+                "backgroundColor": "#9E9E9E"
               }
             },
             "transitionDuration": {
               "regex": "(?<=[:`'\"\\s])duration-[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FF80AB"
+                "backgroundColor": "#9E9E9E"
               }
             },
             "transitionTimingFunction": {
               "regex": "(?<=[:`'\"\\s])ease(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FF80AB"
+                "backgroundColor": "#9E9E9E"
               }
             },
             "transitionDelay": {
               "regex": "(?<=[:`'\"\\s])delay-[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FF80AB"
+                "backgroundColor": "#9E9E9E"
               }
             },
             "animation": {
