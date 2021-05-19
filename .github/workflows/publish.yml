@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 12
-      - name: Publish to Visual Studio Marketplace
+      - name: Install
           - run: npm install
-          - run: "npm publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}"
+      - name: Publish to Visual Studio Marketplace
+          - run: 'npm publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}'
