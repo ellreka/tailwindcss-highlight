@@ -13,6 +13,6 @@ jobs:
         with:
           node-version: 12
       - name: Install
-          - run: npm install
+        - run: npm install
       - name: Publish to Visual Studio Marketplace
-          - run: 'npm publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}'
+        - run: 'npm publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}'
