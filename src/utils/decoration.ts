@@ -7,6 +7,7 @@ import {
 } from 'vscode'
 
 import { MyConfiguration } from './configuration'
+import { getClassNames, getUtility } from './utils'
 
 export class Decoration {
   timer: NodeJS.Timer | undefined
@@ -29,42 +30,18 @@ export class Decoration {
     if (editor == null) return
     const document = editor.document
     const text = document.getText()
-    this.decorators.forEach((decorator) => {
-      const classNameRegex = new RegExp(
-        /(?:\bclass(?:Name)?\s*=\s*(?:{([\w\d\s_\-:/${}()[\]"'`,]+)})|(["'`][\w\d\s_\-:/]+["'`]))|(?:\btw\s*(`[\w\d\s_\-:/]+`))/,
-        'g'
-      )
-      const classNameMatches = text.matchAll(classNameRegex)
-      const chars: DecorationOptions[] = []
-      for (const classNameMatch of classNameMatches) {
-        const stringRegex = new RegExp(
-          /(?:["'`]([\w\d\s_\-:/${}()[\]"']+)["'`])/,
-          'g'
-        )
-        const stringMatches = classNameMatch[0].matchAll(stringRegex)
-        for (const stringMatch of stringMatches) {
-          if (stringMatch == null) return
-          const regex = new RegExp(decorator.regex, 'g')
-          const matches = classNameMatch[0].matchAll(regex)
-          for (const match of matches) {
-            if (
-              match.index == null ||
-              classNameMatch.index == null ||
-              stringMatch.index == null
-            )
-              return
-            const start = document.positionAt(
-              classNameMatch.index + match.index
-            )
-            const end = document.positionAt(
-              classNameMatch.index + match.index + match[0].length
-            )
-            const range = new Range(start, end)
-            chars.push({ range })
-          }
-        }
-      }
-      editor.setDecorations(decorator.decorator, chars)
+    getClassNames(text).forEach((className) => {
+      this.decorators.forEach((decorator) => {
+        const regex = new RegExp(decorator.regex, 'g')
+        const chars: DecorationOptions[] = []
+        getUtility(className.value, regex).forEach((utility) => {
+          const start = document.positionAt(className.start + utility.start)
+          const end = document.positionAt(className.start + utility.end)
+          const range = new Range(start, end)
+          chars.push({ range })
+        })
+        editor.setDecorations(decorator.decorator, chars)
+      })
     })
   }
 
