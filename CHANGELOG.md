@@ -6,6 +6,12 @@
 
 - Highlight the selected utility by the command.
 
+## [1.1.4] 2021-05-19
+
+## Fixed
+
+- The build file was not included.
+
 ## [1.1.0] 2021-05-19
 
 ## Added
