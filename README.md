@@ -3,10 +3,11 @@
 ![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/image_01.png)
 
 This extension highlights the utilities of TailwindCSS.
+You can customize colors and regexes.
 
 ## Installation
 
-https://marketplace.visualstudio.com/items?itemName=ellreka.tailwindcss-highlight
+<https://marketplace.visualstudio.com/items?itemName=ellreka.tailwindcss-highlight>
 
 ## Development
 
@@ -49,8 +50,3 @@ Please run debug mode on the vscode.
   }
 }
 ```
-
-## TODO
-
-- [x] Highlight utilities.
-- [ ] Highlight variants.
