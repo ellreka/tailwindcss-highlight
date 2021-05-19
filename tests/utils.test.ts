@@ -358,7 +358,7 @@ test('transitionDelay', () => {
 })
 
 test('animation', () => {
-  const expected = ['animation-spin']
+  const expected = ['animate-spin']
   const regex = config.animation.regex
   const utility = testUtility(regex)
   expect(utility).toEqual(expect.arrayContaining(expected))

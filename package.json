@@ -294,7 +294,7 @@
               }
             },
             "animation": {
-              "regex": "(?<=[:`'\"\\s])animation-[^`'\"\\s]+",
+              "regex": "(?<=[:`'\"\\s])animate-[^`'\"\\s]+",
               "options": {
                 "color": "black",
                 "backgroundColor": "#FF80AB"

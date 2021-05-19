@@ -31,7 +31,7 @@ export const Component = () => {
     <div className="place-self-auto place-self-start place-self-end place-self-center place-self-stretch"></div>
     <div className="table table-auto table-fixed border-collapse border-separate"></div>
     <div className="transition transition-all duration-10 delay-10 ease-linear ease-in-out"></div>
-    <div className="animation-spin"></div>
+    <div className="animate-spin"></div>
     <div className="transform transform-gpu transform-none"></div>
     <div className="origin-center origin-top-right"></div>
     <div className="scale-10 scale-x-10 scale-y-10"></div>
