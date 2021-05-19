@@ -14,4 +14,4 @@ jobs:
           node-version: 12
       - name: Publish to Visual Studio Marketplace
           - run: npm install
-          - run: npm publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}
+          - run: "npm publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}"
