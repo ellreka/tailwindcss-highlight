@@ -105,7 +105,7 @@
               }
             },
             "divide": {
-              "regex": "(?<=[:`'\"\\s])divide-(x|y)(|-)[^`'\"\\s]+",
+              "regex": "(?<=[:`'\"\\s])divide(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
                 "backgroundColor": "#DEC38A"
@@ -147,7 +147,7 @@
               }
             },
             "order": {
-              "regex": "(?<=[:`'\"\\s])order(|-)[^`'\"\\s]+",
+              "regex": "(?<=[:`'\"\\s])(|-)order-[^`'\"\\s]+",
               "options": {
                 "color": "black",
                 "backgroundColor": "#B39DDB"
@@ -224,7 +224,7 @@
               }
             },
             "alignSelf": {
-              "regex": "(?<=[:`'\"\\s])self-(auto|start|end|stretch)",
+              "regex": "(?<=[:`'\"\\s])self-(auto|start|end|center|stretch)",
               "options": {
                 "color": "black",
                 "backgroundColor": "#B39DDB"
@@ -252,21 +252,49 @@
               }
             },
             "table": {
-              "regex": "(?<=[:`'\"\\s])(table(|-auto|-fixed)|border-(collapse|separate))[^`'\"\\s]",
+              "regex": "(?<=[:`'\"\\s])(table-fixed|table-auto|table)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FFB300"
+              }
+            },
+            "borderCollapse": {
+              "regex": "(?<=[:`'\"\\s])border-(collapse|separate)",
               "options": {
                 "color": "black",
                 "backgroundColor": "#FFB300"
               }
             },
             "transition": {
-              "regex": "(?<=[:`'\"\\s])(transition|duration|ease|delay)(|-)[^`'\"\\s]*",
+              "regex": "(?<=[:`'\"\\s])transition(|-)[^`'\"\\s]*",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FF80AB"
+              }
+            },
+            "transitionDuration": {
+              "regex": "(?<=[:`'\"\\s])duration-[^`'\"\\s]*",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FF80AB"
+              }
+            },
+            "transitionTimingFunction": {
+              "regex": "(?<=[:`'\"\\s])ease(|-)[^`'\"\\s]*",
+              "options": {
+                "color": "black",
+                "backgroundColor": "#FF80AB"
+              }
+            },
+            "transitionDelay": {
+              "regex": "(?<=[:`'\"\\s])delay-[^`'\"\\s]*",
               "options": {
                 "color": "black",
                 "backgroundColor": "#FF80AB"
               }
             },
             "animation": {
-              "regex": "(?<=[:`'\"\\s])animation(|-)[^`'\"\\s]+",
+              "regex": "(?<=[:`'\"\\s])animation-[^`'\"\\s]+",
               "options": {
                 "color": "black",
                 "backgroundColor": "#FF80AB"
@@ -287,7 +315,7 @@
               }
             },
             "scale": {
-              "regex": "(?<=[:`'\"\\s])(|-)scale-[^`'\"\\s]+",
+              "regex": "(?<=[:`'\"\\s])scale-[^`'\"\\s]+",
               "options": {
                 "color": "black",
                 "backgroundColor": "#FF80AB"
@@ -301,7 +329,7 @@
               }
             },
             "translate": {
-              "regex": "(?<=[:`'\"\\s])(|-)translate-(x|y)-[^`'\"\\s]+",
+              "regex": "(?<=[:`'\"\\s])(|-)translate-[^`'\"\\s]+",
               "options": {
                 "color": "black",
                 "backgroundColor": "#FF80AB"
