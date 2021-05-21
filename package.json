@@ -40,27 +40,13 @@
             "margin",
             "space",
             "border",
+            "rounded",
             "divide",
             "ring",
             "width",
             "height",
             "flex",
             "grid",
-            "order",
-            "gridColumn",
-            "gridRow",
-            "gridAutoColumns",
-            "gridAutoRows",
-            "gap",
-            "justifyContent",
-            "justifyItems",
-            "justifySelf",
-            "alignContent",
-            "alignItems",
-            "alignSelf",
-            "placeContent",
-            "placeItems",
-            "placeSelf",
             "table",
             "borderCollapse",
             "transition",
@@ -73,7 +59,22 @@
             "scale",
             "rotate",
             "translate",
-            "skew"
+            "skew",
+            "text",
+            "textDecoration",
+            "textTransform",
+            "textOverflow",
+            "verticalAlign",
+            "whitespace",
+            "wordBreak",
+            "font",
+            "fontStyle",
+            "leading",
+            "tracking",
+            "background",
+            "gradientColorStops",
+            "position",
+            "inset"
           ],
           "title": "utilities",
           "type": "array"
@@ -84,266 +85,378 @@
               "regex": "(?<=[:`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#BBC488"
+                "backgroundColor": "rgba(187, 196, 136, 1)"
               }
             },
             "margin": {
               "regex": "(?<=[:`'\"\\s])(|-)m(|t|b|r|l|x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#AD865B"
+                "backgroundColor": "rgba(173, 134, 91, 1)"
               }
             },
             "space": {
               "regex": "(?<=[:`'\"\\s])(|-)space-(x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#AD865B"
+                "backgroundColor": "rgba(173, 134, 91, 1)"
               }
             },
             "border": {
               "regex": "(?<=[:`'\"\\s])border(?!-collapse|-separate)(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#DEC38A"
+                "backgroundColor": "rgba(222, 195, 138, 1)"
+              }
+            },
+            "rounded": {
+              "regex": "(?<=[:`'\"\\s])rounded(|-)[^`'\"\\s]*",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(222, 195, 138, 1)"
               }
             },
             "divide": {
               "regex": "(?<=[:`'\"\\s])divide(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#DEC38A"
+                "backgroundColor": "rgba(222, 195, 138, 1)"
               }
             },
             "ring": {
               "regex": "(?<=[:`'\"\\s])ring(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#DEC38A"
+                "backgroundColor": "rgba(222, 195, 138, 1)"
               }
             },
             "width": {
               "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)w-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#a0cade"
+                "backgroundColor": "rgba(160, 202, 222, 1)"
               }
             },
             "height": {
               "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)h-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#e6b1a1"
+                "backgroundColor": "rgba(230, 177, 161, 1)"
               }
             },
             "flex": {
-              "regex": "(?<=[:`'\"\\s])flex(|-)[^`'\"\\s]*",
+              "regex": "(?<=[:`'\"\\s])(|inline-)flex(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "grid": {
               "regex": "(?<=[:`'\"\\s])grid(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "order": {
               "regex": "(?<=[:`'\"\\s])(|-)order-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "gridColumn": {
               "regex": "(?<=[:`'\"\\s])col(|-)[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "gridRow": {
               "regex": "(?<=[:`'\"\\s])row(|-)[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "gridAutoColumns": {
               "regex": "(?<=[:`'\"\\s])auto-cols-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "gridAutoRows": {
               "regex": "(?<=[:`'\"\\s])auto-rows-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "gap": {
               "regex": "(?<=[:`'\"\\s])gap-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "justifyContent": {
               "regex": "(?<=[:`'\"\\s])justify-(start|end|center|between|around|evenly)",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "justifyItems": {
               "regex": "(?<=[:`'\"\\s])justify-items-(start|end|center|stretch)",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "justifySelf": {
               "regex": "(?<=[:`'\"\\s])justify-self-(auto|start|end|center|stretch)",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "alignContent": {
               "regex": "(?<=[:`'\"\\s])content-(start|end|center|between|around|evenly)",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "alignItems": {
               "regex": "(?<=[:`'\"\\s])items-(start|end|center|baseline|stretch)",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "alignSelf": {
               "regex": "(?<=[:`'\"\\s])self-(auto|start|end|center|stretch)",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "placeContent": {
               "regex": "(?<=[:`'\"\\s])place-content-(center|start|end|between|around|evenly|stretch)",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "placeItems": {
               "regex": "(?<=[:`'\"\\s])place-items-(start|end|center|stretch)",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "placeSelf": {
               "regex": "(?<=[:`'\"\\s])place-self-(auto|start|end|center|stretch)",
               "options": {
                 "color": "black",
-                "backgroundColor": "#B39DDB"
+                "backgroundColor": "rgba(192, 175, 224, 1)"
               }
             },
             "table": {
               "regex": "(?<=[:`'\"\\s])(table-fixed|table-auto|table)",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FFB300"
+                "backgroundColor": "rgba(255, 210, 105, 1)"
               }
             },
             "borderCollapse": {
               "regex": "(?<=[:`'\"\\s])border-(collapse|separate)",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FFB300"
+                "backgroundColor": "rgba(255, 210, 105, 1)"
               }
             },
             "transition": {
               "regex": "(?<=[:`'\"\\s])transition(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#9E9E9E"
+                "backgroundColor": "rgba(141, 179, 184, 1)"
               }
             },
             "transitionDuration": {
               "regex": "(?<=[:`'\"\\s])duration-[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#9E9E9E"
+                "backgroundColor": "rgba(141, 179, 184, 1)"
               }
             },
             "transitionTimingFunction": {
               "regex": "(?<=[:`'\"\\s])ease(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#9E9E9E"
+                "backgroundColor": "rgba(141, 179, 184, 1)"
               }
             },
             "transitionDelay": {
               "regex": "(?<=[:`'\"\\s])delay-[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#9E9E9E"
+                "backgroundColor": "rgba(141, 179, 184, 1)"
               }
             },
             "animation": {
               "regex": "(?<=[:`'\"\\s])animate-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FF80AB"
+                "backgroundColor": "rgba(255, 176, 202, 1)"
               }
             },
             "transform": {
               "regex": "(?<=[:`'\"\\s])transform(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FF80AB"
+                "backgroundColor": "rgba(255, 176, 202, 1)"
               }
             },
             "transformOrigin": {
               "regex": "(?<=[:`'\"\\s])origin-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FF80AB"
+                "backgroundColor": "rgba(255, 176, 202, 1)"
               }
             },
             "scale": {
               "regex": "(?<=[:`'\"\\s])scale-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FF80AB"
+                "backgroundColor": "rgba(255, 176, 202, 1)"
               }
             },
             "rotate": {
               "regex": "(?<=[:`'\"\\s])(|-)rotate-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FF80AB"
+                "backgroundColor": "rgba(255, 176, 202, 1)"
               }
             },
             "translate": {
               "regex": "(?<=[:`'\"\\s])(|-)translate-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FF80AB"
+                "backgroundColor": "rgba(255, 176, 202, 1)"
               }
             },
             "skew": {
               "regex": "(?<=[:`'\"\\s])(|-)skew-[^`'\"\\s]+",
               "options": {
                 "color": "black",
-                "backgroundColor": "#FF80AB"
+                "backgroundColor": "rgba(255, 176, 202, 1)"
+              }
+            },
+            "text": {
+              "regex": "(?<=[:`'\"\\s])text-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(171, 169, 169, 1)"
+              }
+            },
+            "textDecoration": {
+              "regex": "(?<=[:`'\"\\s])(underline|line-through|no-underline)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(171, 169, 169, 1)"
+              }
+            },
+            "textTransform": {
+              "regex": "(?<=[:`'\"\\s])(uppercase|lowercase|capitalize|normal-case)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(171, 169, 169, 1)"
+              }
+            },
+            "textOverflow": {
+              "regex": "(?<=[:`'\"\\s])(truncate|overflow-ellipsis|overflow-clip)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(171, 169, 169, 1)"
+              }
+            },
+            "verticalAlign": {
+              "regex": "(?<=[:`'\"\\s])align-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(171, 169, 169, 1)"
+              }
+            },
+            "whitespace": {
+              "regex": "(?<=[:`'\"\\s])whitespace-(normal|nowrap|pre(-line|-wrap|))",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(171, 169, 169, 1)"
+              }
+            },
+            "wordBreak": {
+              "regex": "(?<=[:`'\"\\s])break-(normal|words|all)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(171, 169, 169, 1)"
+              }
+            },
+            "font": {
+              "regex": "(?<=[:`'\"\\s])font-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(171, 169, 169, 1)"
+              }
+            },
+            "fontStyle": {
+              "regex": "(?<=[:`'\"\\s])(italic|not-italic)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(171, 169, 169, 1)"
+              }
+            },
+            "leading": {
+              "regex": "(?<=[:`'\"\\s])leading-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(171, 169, 169, 1)"
+              }
+            },
+            "tracking": {
+              "regex": "(?<=[:`'\"\\s])tracking-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(171, 169, 169, 1)"
+              }
+            },
+            "background": {
+              "regex": "(?<=[:`'\"\\s])bg-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(117, 224, 165, 1)"
+              }
+            },
+            "gradientColorStops": {
+              "regex": "(?<=[:`'\"\\s])(from|via|to)-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(117, 224, 165, 1)"
+              }
+            },
+            "position": {
+              "regex": "(?<=[:`'\"\\s])(static|fixed|absolute|relative|sticky)",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(242, 142, 111, 1)"
+              }
+            },
+            "inset": {
+              "regex": "(?<=[:`'\"\\s])(|-)(inset|top|bottom|left|right)-[^`'\"\\s]+",
+              "options": {
+                "color": "black",
+                "backgroundColor": "rgba(242, 142, 111, 1)"
               }
             }
           },
