@@ -3,6 +3,7 @@ import React from 'react'
 
 export const Component = () => {
   return (
+    <div role="pt-1 mb-1 border-red-100"></div>
     <div className={clsx('p-10 pt-10 pb-10 pl-10 pr-10 px-10 py-10 -p-10', {
       'm-10 mt-10 mb-10 ml-10 mr-10 mx-10 my-10 -m-10': true
     })}>

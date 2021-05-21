@@ -28,8 +28,7 @@
             "javascript",
             "javascriptreact",
             "typescript",
-            "typescriptreact",
-            "vue"
+            "typescriptreact"
           ],
           "title": "language",
           "type": "array"
