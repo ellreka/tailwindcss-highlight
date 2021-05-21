@@ -69,6 +69,13 @@ test('border', () => {
   expect(utility).toEqual(expect.arrayContaining(expected))
 })
 
+test('rounded', () => {
+  const expected = ['rounded', 'rounded-md', 'rounded-l-10']
+  const regex = config.rounded.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
 test('divide', () => {
   const expected = [
     'divide-x-10',
@@ -408,6 +415,137 @@ test('translate', () => {
 test('skew', () => {
   const expected = ['skew-x-10', 'skew-y-10', '-skew-x-10']
   const regex = config.skew.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('text', () => {
+  const expected = ['text-center', 'text-gray-100', 'text-opacity-10']
+  const regex = config.text.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('textDecoration', () => {
+  const expected = ['underline', 'line-through', 'no-underline']
+  const regex = config.textDecoration.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('textTransform', () => {
+  const expected = ['uppercase', 'lowercase', 'capitalize', 'normal-case']
+  const regex = config.textTransform.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('textOverflow', () => {
+  const expected = ['truncate', 'overflow-ellipsis', 'overflow-clip']
+  const regex = config.textOverflow.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('verticalAlign', () => {
+  const expected = ['align-baseline', 'align-text-bottom']
+  const regex = config.verticalAlign.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('whitespace', () => {
+  const expected = [
+    'whitespace-normal',
+    'whitespace-pre-wrap',
+    'whitespace-pre-line',
+    'whitespace-pre'
+  ]
+  const regex = config.whitespace.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('wordBreak', () => {
+  const expected = ['break-normal', 'break-words', 'break-all']
+  const regex = config.wordBreak.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('font', () => {
+  const expected = ['font-sans', 'font-bold']
+  const regex = config.font.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('fontStyle', () => {
+  const expected = ['italic', 'not-italic']
+  const regex = config.fontStyle.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('leading', () => {
+  const expected = ['leading-10', 'leading-normal']
+  const regex = config.leading.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('tracking', () => {
+  const expected = ['tracking-normal']
+  const regex = config.tracking.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('background', () => {
+  const expected = [
+    'bg-fixed',
+    'bg-clip-text',
+    'bg-gray-100',
+    'bg-opacity-10',
+    'bg-left-bottom',
+    'bg-no-repeat',
+    'bg-contain',
+    'bg-gradient-to-t'
+  ]
+  const regex = config.background.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('gradientColorStops', () => {
+  const expected = [
+    'from-transparent',
+    'from-gray-100',
+    'via-gray-100',
+    'to-gray-100'
+  ]
+  const regex = config.gradientColorStops.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('position', () => {
+  const expected = ['static', 'fixed', 'absolute', 'relative', 'sticky']
+  const regex = config.position.regex
+  const utility = testUtility(regex)
+  expect(utility).toEqual(expect.arrayContaining(expected))
+})
+
+test('inset', () => {
+  const expected = [
+    'top-10',
+    '-left-10',
+    'inset-10',
+    '-inset-y-1',
+    'right-3.5',
+    'bottom-1/2'
+  ]
+  const regex = config.inset.regex
   const utility = testUtility(regex)
   expect(utility).toEqual(expect.arrayContaining(expected))
 })

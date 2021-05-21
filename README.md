@@ -1,6 +1,6 @@
 # tailwindcss-highlight
 
-![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/image_01.png)
+![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/visual-image.png)
 
 This extension highlights the utilities of TailwindCSS.
 
@@ -28,25 +28,16 @@ Please run debug mode on the vscode.
 ]
 ```
 
-### Utilities
-
-```json
-"tailwindcss-highlight.utilities": [
-  "padding",
-  "margin",
-  "space"
-]
-```
-
 ### Configs
 
 ```json
 "tailwindcss-highlight.configs": {
   "padding": {
+    "enable": true,
     "regex": "(?<=[:`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+",
     "options": {
       "color": "black",
-      "backgroundColor": "rgb(187, 196, 136)"
+      "backgroundColor": "rgba(187, 196, 136, 1)"
     }
   }
 }
