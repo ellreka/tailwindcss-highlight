@@ -34,54 +34,10 @@
           "title": "language",
           "type": "array"
         },
-        "tailwindcss-highlight.utilities": {
-          "default": [
-            "padding",
-            "margin",
-            "space",
-            "border",
-            "rounded",
-            "divide",
-            "ring",
-            "width",
-            "height",
-            "flex",
-            "grid",
-            "table",
-            "borderCollapse",
-            "transition",
-            "transitionDuration",
-            "transitionTimingFunction",
-            "transitionDelay",
-            "animation",
-            "transform",
-            "transformOrigin",
-            "scale",
-            "rotate",
-            "translate",
-            "skew",
-            "text",
-            "textDecoration",
-            "textTransform",
-            "textOverflow",
-            "verticalAlign",
-            "whitespace",
-            "wordBreak",
-            "font",
-            "fontStyle",
-            "leading",
-            "tracking",
-            "background",
-            "gradientColorStops",
-            "position",
-            "inset"
-          ],
-          "title": "utilities",
-          "type": "array"
-        },
         "tailwindcss-highlight.configs": {
           "default": {
             "padding": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -89,6 +45,7 @@
               }
             },
             "margin": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(|-)m(|t|b|r|l|x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -96,6 +53,7 @@
               }
             },
             "space": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(|-)space-(x|y)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -103,6 +61,7 @@
               }
             },
             "border": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])border(?!-collapse|-separate)(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
@@ -110,6 +69,7 @@
               }
             },
             "rounded": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])rounded(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
@@ -117,6 +77,7 @@
               }
             },
             "divide": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])divide(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
@@ -124,6 +85,7 @@
               }
             },
             "ring": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])ring(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
@@ -131,6 +93,7 @@
               }
             },
             "width": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)w-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -138,6 +101,7 @@
               }
             },
             "height": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)h-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -145,6 +109,7 @@
               }
             },
             "flex": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(|inline-)flex(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
@@ -152,6 +117,7 @@
               }
             },
             "grid": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])grid(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
@@ -159,6 +125,7 @@
               }
             },
             "order": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])(|-)order-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -166,6 +133,7 @@
               }
             },
             "gridColumn": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])col(|-)[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -173,6 +141,7 @@
               }
             },
             "gridRow": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])row(|-)[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -180,6 +149,7 @@
               }
             },
             "gridAutoColumns": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])auto-cols-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -187,6 +157,7 @@
               }
             },
             "gridAutoRows": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])auto-rows-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -194,6 +165,7 @@
               }
             },
             "gap": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])gap-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -201,6 +173,7 @@
               }
             },
             "justifyContent": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])justify-(start|end|center|between|around|evenly)",
               "options": {
                 "color": "black",
@@ -208,6 +181,7 @@
               }
             },
             "justifyItems": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])justify-items-(start|end|center|stretch)",
               "options": {
                 "color": "black",
@@ -215,6 +189,7 @@
               }
             },
             "justifySelf": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])justify-self-(auto|start|end|center|stretch)",
               "options": {
                 "color": "black",
@@ -222,6 +197,7 @@
               }
             },
             "alignContent": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])content-(start|end|center|between|around|evenly)",
               "options": {
                 "color": "black",
@@ -229,6 +205,7 @@
               }
             },
             "alignItems": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])items-(start|end|center|baseline|stretch)",
               "options": {
                 "color": "black",
@@ -236,6 +213,7 @@
               }
             },
             "alignSelf": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])self-(auto|start|end|center|stretch)",
               "options": {
                 "color": "black",
@@ -243,6 +221,7 @@
               }
             },
             "placeContent": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])place-content-(center|start|end|between|around|evenly|stretch)",
               "options": {
                 "color": "black",
@@ -250,6 +229,7 @@
               }
             },
             "placeItems": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])place-items-(start|end|center|stretch)",
               "options": {
                 "color": "black",
@@ -257,6 +237,7 @@
               }
             },
             "placeSelf": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])place-self-(auto|start|end|center|stretch)",
               "options": {
                 "color": "black",
@@ -264,6 +245,7 @@
               }
             },
             "table": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])(table-fixed|table-auto|table)",
               "options": {
                 "color": "black",
@@ -271,6 +253,7 @@
               }
             },
             "borderCollapse": {
+              "enable": false,
               "regex": "(?<=[:`'\"\\s])border-(collapse|separate)",
               "options": {
                 "color": "black",
@@ -278,6 +261,7 @@
               }
             },
             "transition": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])transition(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
@@ -285,6 +269,7 @@
               }
             },
             "transitionDuration": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])duration-[^`'\"\\s]*",
               "options": {
                 "color": "black",
@@ -292,6 +277,7 @@
               }
             },
             "transitionTimingFunction": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])ease(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
@@ -299,6 +285,7 @@
               }
             },
             "transitionDelay": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])delay-[^`'\"\\s]*",
               "options": {
                 "color": "black",
@@ -306,6 +293,7 @@
               }
             },
             "animation": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])animate-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -313,6 +301,7 @@
               }
             },
             "transform": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])transform(|-)[^`'\"\\s]*",
               "options": {
                 "color": "black",
@@ -320,6 +309,7 @@
               }
             },
             "transformOrigin": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])origin-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -327,6 +317,7 @@
               }
             },
             "scale": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])scale-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -334,6 +325,7 @@
               }
             },
             "rotate": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(|-)rotate-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -341,6 +333,7 @@
               }
             },
             "translate": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(|-)translate-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -348,6 +341,7 @@
               }
             },
             "skew": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(|-)skew-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -355,6 +349,7 @@
               }
             },
             "text": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])text-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -362,6 +357,7 @@
               }
             },
             "textDecoration": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(underline|line-through|no-underline)",
               "options": {
                 "color": "black",
@@ -369,6 +365,7 @@
               }
             },
             "textTransform": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(uppercase|lowercase|capitalize|normal-case)",
               "options": {
                 "color": "black",
@@ -376,6 +373,7 @@
               }
             },
             "textOverflow": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(truncate|overflow-ellipsis|overflow-clip)",
               "options": {
                 "color": "black",
@@ -383,6 +381,7 @@
               }
             },
             "verticalAlign": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])align-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -390,6 +389,7 @@
               }
             },
             "whitespace": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])whitespace-(normal|nowrap|pre(-line|-wrap|))",
               "options": {
                 "color": "black",
@@ -397,6 +397,7 @@
               }
             },
             "wordBreak": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])break-(normal|words|all)",
               "options": {
                 "color": "black",
@@ -404,6 +405,7 @@
               }
             },
             "font": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])font-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -411,6 +413,7 @@
               }
             },
             "fontStyle": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(italic|not-italic)",
               "options": {
                 "color": "black",
@@ -418,13 +421,16 @@
               }
             },
             "leading": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])leading-[^`'\"\\s]+",
               "options": {
+                "enable": true,
                 "color": "black",
                 "backgroundColor": "rgba(171, 169, 169, 1)"
               }
             },
             "tracking": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])tracking-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -432,6 +438,7 @@
               }
             },
             "background": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])bg-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -439,6 +446,7 @@
               }
             },
             "gradientColorStops": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(from|via|to)-[^`'\"\\s]+",
               "options": {
                 "color": "black",
@@ -446,6 +454,7 @@
               }
             },
             "position": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(static|fixed|absolute|relative|sticky)",
               "options": {
                 "color": "black",
@@ -453,6 +462,7 @@
               }
             },
             "inset": {
+              "enable": true,
               "regex": "(?<=[:`'\"\\s])(|-)(inset|top|bottom|left|right)-[^`'\"\\s]+",
               "options": {
                 "color": "black",

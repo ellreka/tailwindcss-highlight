@@ -17,7 +17,7 @@ export class Decoration {
     this.timer = undefined
     this.configuration = configuration
     this.decorators = Object.entries(configuration.configs)
-      .filter((config) => configuration.utilities.includes(config[0]))
+      .filter((config) => config[1].enable)
       .map((config) => {
         return {
           regex: config[1].regex,
@@ -30,11 +30,13 @@ export class Decoration {
     if (editor == null) return
     const document = editor.document
     const text = document.getText()
-    getClassNames(text).forEach((className) => {
-      this.decorators.forEach((decorator) => {
-        const regex = new RegExp(decorator.regex, 'g')
-        const chars: DecorationOptions[] = []
-        getUtility(className.value, regex).forEach((utility) => {
+    const classNames = getClassNames(text)
+    this.decorators.forEach((decorator) => {
+      const regex = new RegExp(decorator.regex, 'g')
+      const chars: DecorationOptions[] = []
+      classNames.forEach((className) => {
+        const utilities = getUtility(className.value, regex)
+        utilities.forEach((utility) => {
           const start = document.positionAt(className.start + utility.start)
           const end = document.positionAt(className.start + utility.end)
           const range = new Range(start, end)
