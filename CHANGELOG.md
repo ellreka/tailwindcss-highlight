@@ -6,13 +6,27 @@
 
 - Highlight the selected utility by the command.
 
+## [1.2.0] 2021-05-21
+
+## Added
+
+- Added some utilities.
+
+- Added sample code for visual image.
+
+## Fixed
+
+- Delete utilities property from configuration.
+
+- Fixed matching of strings other than the className.
+
 ## [1.1.4] 2021-05-19
 
 ## Fixed
 
 - The build file was not included.
 
-## [1.1.0] 2021-05-19
+## [1.1.1] 2021-05-19
 
 ## Added
 
