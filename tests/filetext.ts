@@ -14,7 +14,7 @@ export const Component = () => {
     <div className="ring ring-0 ring-gray-100 ring-offset-gray-100"></div>
     <div className="w w- w-0 w-10 w-2.5 w-1/2 w-full min-w-100 max-w-100 max-w-screen-sm"></div>
     <div className="h h- h-0 h-10 h-2.5 h-1/2 h-full min-h-100 max-h-100"></div>
-    <div className="flex flex-1 flex-auto flex-grow-0 flex-shrink-0"></div>
+    <div className="flex flex-1 flex-auto flex-grow-0 flex-shrink-0 inline-flex"></div>
     <div className="grid grid-flow-row grid-flow-row-dense"></div>
     <div className="order-10 order-none -order-1"></div>
     <div className="col-auto col-span-10 col-start-10 col-end-10"></div>
