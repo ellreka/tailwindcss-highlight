@@ -15,4 +15,4 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Publish to Visual Studio Marketplace
-        run: 'npm vscode:publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}'
+        run: 'npm run vscode:publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}'
