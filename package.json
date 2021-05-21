@@ -477,8 +477,8 @@
   },
   "scripts": {
     "dev": "tsc -watch -p ./",
+    "build": "tsc -p ./",
     "package": "vsce package",
-    "vscode:prepublish": "tsc -p ./",
     "vscode:publish": "vsce publish",
     "test": "jest"
   },
