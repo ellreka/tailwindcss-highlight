@@ -1,5 +1,6 @@
 {
   "name": "tailwindcss-highlight",
+  "displayName": "Tailwind CSS Highlight",
   "version": "1.2.0",
   "main": "out/extension.js",
   "license": "MIT",
@@ -9,7 +10,9 @@
     "url": "https://github.com/ellreka/tailwindcss-highlight.git"
   },
   "keywords": [
-    "tailwindcss"
+    "tailwindcss",
+    "tailwind",
+    "highlight"
   ],
   "icon": "assets/icon.png",
   "engines": {
@@ -20,7 +23,7 @@
   ],
   "contributes": {
     "configuration": {
-      "title": "tailwindcss highlight",
+      "title": "Tailwind CSS Highlight",
       "properties": {
         "tailwindcss-highlight.languages": {
           "default": [
