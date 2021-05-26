@@ -6,6 +6,12 @@
 
 - Highlight the selected utility by the command.
 
+## [1.2.1] 2021-05-26
+
+## Changed
+
+- Changed display name.
+
 ## [1.2.0] 2021-05-21
 
 ## Added
