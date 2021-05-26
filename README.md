@@ -1,4 +1,4 @@
-# tailwindcss-highlight
+# Tailwind CSS Highlight
 
 ![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/visual-image.png)
 
