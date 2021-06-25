@@ -1,7 +1,7 @@
 import { ExtensionContext, window, workspace } from 'vscode'
 
-import { Configuration } from './utils/configuration'
-import { Decoration } from './utils/decoration'
+import { Configuration } from './configuration'
+import { Decoration } from './decoration'
 
 export async function activate(context: ExtensionContext): Promise<void> {
   const configuration = new Configuration()

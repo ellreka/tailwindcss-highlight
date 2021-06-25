@@ -1,5 +1,5 @@
 import pJson from '../package.json'
-import { getClassNames, getUtility } from '../src/utils/utils'
+import { getClassNames, getUtility } from '../src/utils'
 import { filetext } from './filetext'
 
 const config =
