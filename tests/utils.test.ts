@@ -24,7 +24,8 @@ test('padding', () => {
     'pr-10',
     'px-10',
     'py-10',
-    '-p-10'
+    '-p-10',
+    'p-[10px]'
   ]
   const regex = config.padding.regex
   const utility = testUtility(regex)
