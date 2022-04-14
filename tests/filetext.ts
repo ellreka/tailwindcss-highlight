@@ -52,7 +52,7 @@ export const Component = () => {
     <div className="bg-fixed bg-clip-text bg-gray-100 bg-opacity-10 bg-left-bottom bg-no-repeat bg-contain bg-gradient-to-t"></div>
     <div className="from-transparent from-gray-100 via-gray-100 to-gray-100"></div>
     <div className="static fixed absolute relative sticky"></div>
-    <div className="top-10 -left-10 inset-10 -inset-y-1 right-3.5 bottom-1/2"></div>
+    <div className="top-10 -left-10 inset-10 -inset-y-1 right-3.5 bottom-1/2 bottom-[calc(100%+0.6rem)]"></div>
     <div className=""></div>
     <div className=""></div>
     <div className=""></div>

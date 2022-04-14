@@ -544,7 +544,8 @@ test('inset', () => {
     'inset-10',
     '-inset-y-1',
     'right-3.5',
-    'bottom-1/2'
+    'bottom-1/2',
+    'bottom-[calc(100%+0.6rem)]'
   ]
   const regex = config.inset.regex
   const utility = testUtility(regex)
