@@ -6,7 +6,7 @@
 
 - Highlight the selected utility by the command.
 
-## [1.2.2] 2021-04-14
+## [1.2.3] 2021-04-14
 
 ## Added
 
