@@ -6,6 +6,12 @@
 
 - Highlight the selected utility by the command.
 
+## [1.2.4] 2021-04-15
+
+## Fixed
+
+- Fixed some strings not being highlighted.
+
 ## [1.2.3] 2021-04-14
 
 ## Added
