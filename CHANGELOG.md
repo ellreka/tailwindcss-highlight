@@ -6,6 +6,16 @@
 
 - Highlight the selected utility by the command.
 
+## [1.2.2] 2021-04-14
+
+## Added
+
+- Added `vue`, `php`, `svelte` to the default languages config.
+
+## Fixed
+
+- Fixed not working in jit mode.
+
 ## [1.2.1] 2021-05-26
 
 ## Changed

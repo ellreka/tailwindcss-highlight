@@ -31,10 +31,16 @@
             "javascript",
             "javascriptreact",
             "typescript",
-            "typescriptreact"
+            "typescriptreact",
+            "vue",
+            "php",
+            "svelte"
           ],
           "title": "language",
-          "type": "array"
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         "tailwindcss-highlight.configs": {
           "default": {
