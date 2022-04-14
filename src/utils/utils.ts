@@ -3,11 +3,11 @@ export function getClassNames(
 ): Array<{ start: number; value: string }> {
   const arr = []
   const classNameMatches = targetText.matchAll(
-    /(?:\b(?:class(?:Name)?|tw)\s*=\s*(?:(?:{([\w\d\s\S.:/${}()[\]"'`,]+)})|(["'`][\w\d\s\S.:/]+["'`])))/g
+    /(?:\b(?:class(?:Name)?|tw)\s*=\s*(?:(?:{([\s\S.:/${}()[\]"'`,]+)})|(["'`][\s\S.:/]+["'`])))/g
   )
   for (const classNameMatch of classNameMatches) {
     const stringMatches = classNameMatch[0].matchAll(
-      /(?:["'`]([\w\s_\-.:/${}()[\]"']+)["'`])/g
+      /(?:["'`]([\s\S.:/${}()[\]"']+)["'`])/g
     )
     for (const stringMatch of stringMatches) {
       if (classNameMatch.index != null && stringMatch.index != null) {

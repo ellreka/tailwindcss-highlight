@@ -1,5 +1,5 @@
 {
-  "include": ["src"],
+  "include": ["src", "tests"],
   "extends": "@ellreka/configs/tsconfig",
   "compilerOptions": {
     "outDir": "out",
