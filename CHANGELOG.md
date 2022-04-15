@@ -6,6 +6,16 @@
 
 - Highlight the selected utility by the command.
 
+## [1.2.6] 2021-04-16
+
+## Changed
+
+- Updated README.md.
+
+## Fixed
+
+- Apply changes to settings without reloading.
+
 ## [1.2.4] 2021-04-15
 
 ## Fixed
