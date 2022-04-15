@@ -21,6 +21,14 @@ export async function activate(context: ExtensionContext): Promise<void> {
     null,
     context.subscriptions
   )
+  workspace.onDidChangeConfiguration(
+    (event) => {
+      const configuration = new Configuration()
+      decoration.update(configuration)
+    },
+    null,
+    context.subscriptions
+  )
 }
 
 export async function deactivate(): Promise<void> {

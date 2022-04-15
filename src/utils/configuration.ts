@@ -10,7 +10,7 @@ export interface Configs {
 }
 
 export interface MyConfiguration {
-  configs: Record<string, Configs> | {}
+  configs: Record<string, Configs>
   /**
    * Configure a list of languages that should be highlight.
    */
@@ -25,10 +25,10 @@ export class Configuration {
   }
 
   get languages(): MyConfiguration['languages'] {
-    return this.configuration.get('languages', [])
+    return this.configuration.get('languages') ?? []
   }
 
   get configs(): MyConfiguration['configs'] {
-    return this.configuration.get('configs', {})
+    return this.configuration.get('configs') ?? {}
   }
 }
