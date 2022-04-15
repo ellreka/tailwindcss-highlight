@@ -47,7 +47,18 @@ export class Decoration {
     })
   }
 
-  update(): void {
+  update(configuration?: MyConfiguration): void {
+    if (configuration != null) {
+      this.configuration = configuration
+      this.decorators = Object.entries(configuration.configs)
+        .filter((config) => config[1].enable)
+        .map((config) => {
+          return {
+            regex: config[1].regex,
+            decorator: window.createTextEditorDecorationType(config[1].options)
+          }
+        })
+    }
     const editor = window.activeTextEditor
     if (editor == null) return
     const languageId = editor.document.languageId
