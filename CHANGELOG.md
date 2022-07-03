@@ -6,6 +6,12 @@
 
 - Highlight the selected utility by the command.
 
+## [1.2.7] 2022-07-03
+
+## Fixed
+
+- Fixed regex matching className.
+
 ## [1.2.6] 2021-04-16
 
 ## Changed
