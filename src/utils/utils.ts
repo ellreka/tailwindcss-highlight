@@ -2,9 +2,13 @@ export function getClassNames(
   targetText: string
 ): Array<{ start: number; value: string }> {
   const arr = []
-  const classNameMatches = targetText.matchAll(
-    /(?:\b(?:class(?:Name)?|tw)\s*=\s*(?:(?:{([\s\S.:/${}()[\]"'`,]+)})|(["'`][\s\S.:/]+["'`])))/g
-  )
+  // FIXME: 正規表現だけでは様々なケースに対応できない
+  const regexes = [
+    /(?:\b(?:class(?:Name)?|tw)\s*=\s*(?:(?:{([^>}]+)})|(["'`][^"'`]+["'`])))/,
+    /(?:(clsx|classnames)\()([^)]+)\)/
+  ]
+  const regex = new RegExp(regexes.map((r) => r.source).join('|'), 'gm')
+  const classNameMatches = targetText.matchAll(regex)
   for (const classNameMatch of classNameMatches) {
     const stringMatches = classNameMatch[0].matchAll(
       /(?:["'`]([\s\S.:/${}()[\]"']+)["'`])/g

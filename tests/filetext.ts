@@ -2,12 +2,13 @@ export const filetext = `
 import React from 'react'
 
 export const Component = () => {
+  const btn = classnames("p-20 pt-20 pb-20 pl-20 pr-20 px-20 py-20", true ? "-p-20 ": "p-[20px]")
   return (
     <div role="pt-1 mb-1 border-red-100"></div>
     <div className={clsx('p-10 pt-10 pb-10 pl-10 pr-10 px-10 py-10 -p-10 p-[10px]', {
       'm-10 mt-10 mb-10 ml-10 mr-10 mx-10 my-10 -m-10': true
     })}>
-    <div className="space-x-10 space-y-10 -space-x-10 -space-y-10"></div>
+    <div className={classnames("space-x-10 space-y-10", true ? "-space-x-10" : "-space-y-10" )}></div>
     <div className="border border-t-10 border-t border-none border-gray-100 border-opacity-0 border-solid"></div>
     <div className="rounded rounded-md rounded-l-10"></div>
     <div className="divide-x-10 divide-y-10 divide-x divide-y divide-gray-100"></div>
@@ -53,7 +54,11 @@ export const Component = () => {
     <div className="from-transparent from-gray-100 via-gray-100 to-gray-100"></div>
     <div className="static fixed absolute relative sticky"></div>
     <div className="top-10 -left-10 inset-10 -inset-y-1 right-3.5 bottom-1/2 bottom-[calc(100%+0.6rem)]"></div>
-    <div className=""></div>
+    <div style={
+      {
+        transform: 'translateX(10px)',
+      }
+    } className=""></div>
     <div className=""></div>
     <div className=""></div>
     </div>
