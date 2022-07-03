@@ -34,6 +34,7 @@
             "typescriptreact",
             "vue",
             "php",
+            "blade",
             "svelte"
           ],
           "title": "language",
