@@ -6,7 +6,15 @@
 
 - Highlight the selected utility by the command.
 
-## [1.2.7] 2022-07-03
+## [1.3.0] 2022-07-20
+
+## Changed
+
+- Changed highlight style.
+
+- Disabled some utilities.
+
+## [1.2.8] 2022-07-03
 
 ## Fixed
 
