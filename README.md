@@ -35,6 +35,8 @@ List of languages to apply highlighting.
 
 ### `tailwindcss-highlight.configs`
 
+Configuration for highlighting utilities.
+
 | Name    | Description                 | Type                                                                                                       |
 | ------- | --------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | enable  | Whether to highlight        | `Boolean`                                                                                                  |
@@ -72,17 +74,19 @@ List of languages to apply highlighting.
     }
   },
 }
-````
+```
 
 ![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/example-configs.png)
 
 ### `tailwindcss-highlight.variants`
 
-| Name     | Description          | Type        |
-| -------- | -------------------- | ----------- |
-| enable   | Whether to highlight | `Boolean`   |
-| variants | List of variant      | ` String[]` |
-| color    | Font color code      | `String`    |
+Configuration for highlighting variants.
+
+| Name     | Description          | Type       |
+| -------- | -------------------- | ---------- |
+| enable   | Whether to highlight | `Boolean`  |
+| variants | List of variant      | `String[]` |
+| color    | Font color code      | `String`   |
 
 ```json
 "tailwindcss-highlight.configs": {
