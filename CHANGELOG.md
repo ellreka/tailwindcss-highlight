@@ -5,16 +5,6 @@
 - feat: add variants highlighting by @ellreka in https://github.com/ellreka/tailwindcss-highlight/pull/64
 ### Changed
 - ci: add tagpr by @ellreka in https://github.com/ellreka/tailwindcss-highlight/pull/62
-- chore(deps): pin dependency rimraf to 3.0.2 by @renovate in https://github.com/ellreka/tailwindcss-highlight/pull/65
-- chore(deps): update dependency ts-jest to v28.0.8 by @renovate in https://github.com/ellreka/tailwindcss-highlight/pull/66
-- chore(deps): update jest monorepo by @renovate in https://github.com/ellreka/tailwindcss-highlight/pull/67
-- chore(deps): update dependency @types/vscode to v1.71.0 by @renovate in https://github.com/ellreka/tailwindcss-highlight/pull/68
-- chore(deps): update dependency eslint to v8.23.1 by @renovate in https://github.com/ellreka/tailwindcss-highlight/pull/69
-- chore(deps): update dependency typescript to v4.8.3 by @renovate in https://github.com/ellreka/tailwindcss-highlight/pull/70
-- chore(deps): update node.js to v16.17.1 by @renovate in https://github.com/ellreka/tailwindcss-highlight/pull/72
-- chore(deps): update jest monorepo to v29 (major) by @renovate in https://github.com/ellreka/tailwindcss-highlight/pull/74
-- chore(deps): update dependency vsce to v2.11.0 by @renovate in https://github.com/ellreka/tailwindcss-highlight/pull/71
-- chore(deps): update haaleo/publish-vscode-extension action to v1 by @renovate in https://github.com/ellreka/tailwindcss-highlight/pull/73
 - chore: update visual image and icon by @ellreka in https://github.com/ellreka/tailwindcss-highlight/pull/76
 
 ## Unreleased
