@@ -3,14 +3,21 @@ import {
   workspace,
   WorkspaceConfiguration
 } from 'vscode'
-export interface Configs {
+
+type Configs = Record<string,{
   enable: boolean
   options: DecorationRenderOptions
   regex: string
-}
+}>
 
+type VariantsConfig = Record<string,  {
+  enable: boolean
+  variants: string[]
+  color: string
+}
+>
 export interface MyConfiguration {
-  configs: Record<string, Configs>
+  configs: Configs
   /**
    * Configure a list of languages that should be highlight.
    */
@@ -29,6 +36,20 @@ export class Configuration {
   }
 
   get configs(): MyConfiguration['configs'] {
-    return this.configuration.get('configs') ?? {}
+    const variants = this.configuration.get<VariantsConfig>('variants') ?? {}
+    const configs = this.configuration.get<Configs>('configs') ?? {}
+    return {
+      ...configs,
+      ...Object.entries(variants).reduce((acc, [key, value]) => {
+        acc[`variants:${key}`] = {
+          enable: value.enable,
+          options: {
+            color: value.color,
+          },
+          regex: `(?<=[:\`\'\"\\s])(${value.variants.join('|')}):`
+        }
+        return acc
+      }, {} as Configs)
+    }
   }
 }

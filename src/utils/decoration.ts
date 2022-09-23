@@ -18,6 +18,16 @@ export class Decoration {
     this.configuration = configuration
     this.decorators = Object.entries(configuration.configs)
       .filter((config) => config[1].enable)
+      .sort((a, b) => {
+        console.log(a[0])
+        if (
+          a[0].startsWith('variants:') &&
+          !['variants:other', 'variants:responsive'].includes(a[0])
+        ) {
+          return -1
+        }
+        return 0
+      })
       .map((config) => {
         return {
           regex: config[1].regex,
