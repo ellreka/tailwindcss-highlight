@@ -16,7 +16,7 @@ Please run debug mode on the vscode.
 
 ## Configuration
 
-### Languages
+### `tailwindcss-highlight.languages`
 
 List of languages to apply highlighting.
 
@@ -33,12 +33,12 @@ List of languages to apply highlighting.
 ]
 ```
 
-### Configs
+### `tailwindcss-highlight.configs`
 
 | Name    | Description                 | Type                                                                                                       |
 | ------- | --------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| enable  | Whether to highlight        | Boolean                                                                                                    |
-| regex   | Regular expression to match | String                                                                                                     |
+| enable  | Whether to highlight        | `Boolean`                                                                                                  |
+| regex   | Regular expression to match | `String`                                                                                                   |
 | options | Highlight styles            | [DecorationRenderOptions](https://code.visualstudio.com/api/references/vscode-api#DecorationRenderOptions) |
 
 ```json
@@ -54,7 +54,9 @@ List of languages to apply highlighting.
 }
 ```
 
-#### Example
+#### Customization example
+
+##### Make it a underline instead of a highlight
 
 ```json
 "tailwindcss-highlight.configs": {
@@ -70,6 +72,48 @@ List of languages to apply highlighting.
     }
   },
 }
-```
+````
 
 ![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/example-configs.png)
+
+### `tailwindcss-highlight.variants`
+
+| Name     | Description          | Type        |
+| -------- | -------------------- | ----------- |
+| enable   | Whether to highlight | `Boolean`   |
+| variants | List of variant      | ` String[]` |
+| color    | Font color code      | `String`    |
+
+```json
+"tailwindcss-highlight.configs": {
+  "responsive": {
+    "enable": true,
+    "variants": [
+      "sm",
+      "md",
+      "lg",
+      "xl",
+      "2xl"
+    ],
+    "color": "#51FFFF"
+  },
+}
+```
+
+#### Customization example
+
+##### Change the color of the focus variants
+
+```json
+"tailwindcss-highlight.configs": {
+  "focus": {
+    "enable": true,
+    "variants": [
+      "focus",
+      "focus-within",
+      "focus-visible"
+    ],
+    "color": "#FFB6C1"
+  },
+}
+```
