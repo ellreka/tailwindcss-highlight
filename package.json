@@ -619,11 +619,11 @@
   },
   "devDependencies": {
     "@ellreka/configs": "1.1.14",
-    "@types/jest": "28.1.4",
+    "@types/jest": "28.1.8",
     "@types/node": "18.0.0",
     "@types/vscode": "1.56.0",
     "eslint": "8.19.0",
-    "jest": "28.1.2",
+    "jest": "28.1.3",
     "prettier": "2.7.1",
     "rimraf": "^3.0.2",
     "ts-jest": "28.0.5",
