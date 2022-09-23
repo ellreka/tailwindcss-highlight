@@ -12,7 +12,7 @@ export const Button: FC<ButtonProps> = (props) => {
       <button
         {...props}
         className={clsx(
-          'rounded-full border border-gray-400 bg-sky-200 py-1 px-3',
+          'rounded-full border border-gray-400 bg-sky-200 py-1 px-3 lg:py-2 lg:px-4 text-sm lg:text-base font-medium text-gray-800 hover:bg-sky-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 disabled:opacity-50 disabled:cursor-not-allowed',
           disabled && 'bg-sky-200/70 opacity-70'
         )}
         style={{
