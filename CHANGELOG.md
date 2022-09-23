@@ -1,5 +1,9 @@
 # Change Log
 
+## [v1.4.1](https://github.com/ellreka/tailwindcss-highlight/compare/v1.4.0...v1.4.1) - 2022-09-23
+### Changed
+- fix: fix vscode engines version by @ellreka in https://github.com/ellreka/tailwindcss-highlight/pull/77
+
 ## [v1.4.0](https://github.com/ellreka/tailwindcss-highlight/compare/v1.3.0...v1.4.0) - 2022-09-23
 ### Added
 - feat: add variants highlighting by @ellreka in https://github.com/ellreka/tailwindcss-highlight/pull/64
