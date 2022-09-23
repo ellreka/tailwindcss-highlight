@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.4.0](https://github.com/ellreka/tailwindcss-highlight/compare/v1.3.0...v1.4.0) - 2022-09-23
+### Added
+- feat: add variants highlighting by @ellreka in https://github.com/ellreka/tailwindcss-highlight/pull/64
+### Changed
+- ci: add tagpr by @ellreka in https://github.com/ellreka/tailwindcss-highlight/pull/62
+- chore: update visual image and icon by @ellreka in https://github.com/ellreka/tailwindcss-highlight/pull/76
+
 ## Unreleased
 
 - Highlight variants.
