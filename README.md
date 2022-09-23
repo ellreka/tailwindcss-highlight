@@ -1,6 +1,6 @@
 # Tailwind CSS Highlight
 
-![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/visual-image.png)
+![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/visual-image2.png)
 
 This extension highlights the utilities of TailwindCSS.
 
