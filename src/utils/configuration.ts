@@ -42,7 +42,7 @@ export class Configuration {
       ...configs,
       ...Object.entries(variants).reduce((acc, [key, value]) => {
         acc[`variants:${key}`] = {
-          enable: value.enable,
+          enable: value.enable ?? true,
           options: {
             color: value.color,
           },

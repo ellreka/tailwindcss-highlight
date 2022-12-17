@@ -46,7 +46,6 @@
         "tailwindcss-highlight.variants": {
           "default": {
             "responsive": {
-              "enable": true,
               "variants": [
                 "sm",
                 "md",
@@ -57,7 +56,6 @@
               "color": "#51FFFF"
             },
             "other": {
-              "enable": true,
               "variants": [
                 "hover",
                 "focus",
@@ -117,491 +115,166 @@
         "tailwindcss-highlight.configs": {
           "default": {
             "padding": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(187, 196, 136, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+"
             },
             "margin": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)m(|t|b|r|l|x|y)-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(173, 134, 91, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(|-)m(|t|b|r|l|x|y)-[^`'\"\\s]+"
             },
             "space": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)space-(x|y)-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(173, 134, 91, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(|-)space-(x|y)-[^`'\"\\s]+"
             },
             "border": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])border(?!-collapse|-separate)(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(222, 195, 138, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])border(?!-collapse|-separate)(|-)[^`'\"\\s]*"
             },
             "rounded": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])rounded(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(222, 195, 138, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])rounded(|-)[^`'\"\\s]*"
             },
             "divide": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])divide(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(222, 195, 138, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])divide(|-)[^`'\"\\s]*"
             },
             "ring": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])ring(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(222, 195, 138, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])ring(|-)[^`'\"\\s]*"
             },
             "width": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)w-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(160, 202, 222, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)w-[^`'\"\\s]+"
             },
             "height": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)h-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(230, 177, 161, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)h-[^`'\"\\s]+"
             },
             "flex": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|inline-)flex(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(|inline-)flex(|-)[^`'\"\\s]*"
             },
             "grid": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])grid(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])grid(|-)[^`'\"\\s]*"
             },
             "order": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(|-)order-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(|-)order-[^`'\"\\s]+"
             },
             "gridColumn": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])col(|-)[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])col(|-)[^`'\"\\s]+"
             },
             "gridRow": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])row(|-)[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])row(|-)[^`'\"\\s]+"
             },
             "gridAutoColumns": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])auto-cols-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])auto-cols-[^`'\"\\s]+"
             },
             "gridAutoRows": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])auto-rows-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])auto-rows-[^`'\"\\s]+"
             },
             "gap": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])gap-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])gap-[^`'\"\\s]+"
             },
             "justifyContent": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])justify-(start|end|center|between|around|evenly)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])justify-(start|end|center|between|around|evenly)"
             },
             "justifyItems": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])justify-items-(start|end|center|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])justify-items-(start|end|center|stretch)"
             },
             "justifySelf": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])justify-self-(auto|start|end|center|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])justify-self-(auto|start|end|center|stretch)"
             },
             "alignContent": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])content-(start|end|center|between|around|evenly)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])content-(start|end|center|between|around|evenly)"
             },
             "alignItems": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])items-(start|end|center|baseline|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])items-(start|end|center|baseline|stretch)"
             },
             "alignSelf": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])self-(auto|start|end|center|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])self-(auto|start|end|center|stretch)"
             },
             "placeContent": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])place-content-(center|start|end|between|around|evenly|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])place-content-(center|start|end|between|around|evenly|stretch)"
             },
             "placeItems": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])place-items-(start|end|center|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])place-items-(start|end|center|stretch)"
             },
             "placeSelf": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])place-self-(auto|start|end|center|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])place-self-(auto|start|end|center|stretch)"
             },
             "table": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(table-fixed|table-auto|table)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 210, 105, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(table-fixed|table-auto|table)"
             },
             "borderCollapse": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])border-(collapse|separate)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 210, 105, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])border-(collapse|separate)"
             },
             "transition": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])transition(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(141, 179, 184, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])transition(|-)[^`'\"\\s]*"
             },
             "transitionDuration": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])duration-[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(141, 179, 184, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])duration-[^`'\"\\s]*"
             },
             "transitionTimingFunction": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])ease(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(141, 179, 184, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])ease(|-)[^`'\"\\s]*"
             },
             "transitionDelay": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])delay-[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(141, 179, 184, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])delay-[^`'\"\\s]*"
             },
             "animation": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])animate-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])animate-[^`'\"\\s]+"
             },
             "transform": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])transform(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])transform(|-)[^`'\"\\s]*"
             },
             "transformOrigin": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])origin-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])origin-[^`'\"\\s]+"
             },
             "scale": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])scale-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])scale-[^`'\"\\s]+"
             },
             "rotate": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)rotate-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(|-)rotate-[^`'\"\\s]+"
             },
             "translate": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)translate-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(|-)translate-[^`'\"\\s]+"
             },
             "skew": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)skew-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(|-)skew-[^`'\"\\s]+"
             },
             "text": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])text-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])text-[^`'\"\\s]+"
             },
             "textDecoration": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(underline|line-through|no-underline)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(underline|line-through|no-underline)"
             },
             "textTransform": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(uppercase|lowercase|capitalize|normal-case)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(uppercase|lowercase|capitalize|normal-case)"
             },
             "textOverflow": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(truncate|overflow-ellipsis|overflow-clip)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(truncate|overflow-ellipsis|overflow-clip)"
             },
             "verticalAlign": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])align-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])align-[^`'\"\\s]+"
             },
             "whitespace": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])whitespace-(normal|nowrap|pre(-line|-wrap|))",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])whitespace-(normal|nowrap|pre(-line|-wrap|))"
             },
             "wordBreak": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])break-(normal|words|all)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])break-(normal|words|all)"
             },
             "font": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])font-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])font-[^`'\"\\s]+"
             },
             "fontStyle": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(italic|not-italic)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(italic|not-italic)"
             },
             "leading": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])leading-[^`'\"\\s]+",
-              "options": {
-                "enable": true,
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])leading-[^`'\"\\s]+"
             },
             "tracking": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])tracking-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])tracking-[^`'\"\\s]+"
             },
             "background": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])bg-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(117, 224, 165, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])bg-[^`'\"\\s]+"
             },
             "gradientColorStops": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(from|via|to)-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(117, 224, 165, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(from|via|to)-[^`'\"\\s]+"
             },
             "position": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(static|fixed|absolute|relative|sticky)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(242, 142, 111, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(static|fixed|absolute|relative|sticky)"
             },
             "inset": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(|-)(inset|top|bottom|left|right)-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(242, 142, 111, 1)"
-              }
+              "regex": "(?<=[:`'\"\\s])(|-)(inset|top|bottom|left|right)-[^`'\"\\s]+"
             }
           },
           "title": "configs",

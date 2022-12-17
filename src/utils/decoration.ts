@@ -13,11 +13,17 @@ export class Decoration {
   timer: NodeJS.Timer | undefined
   configuration: MyConfiguration
   decorators: Array<{ decorator: TextEditorDecorationType; regex: string }>
+  private options = {
+    backgroundColor: '',
+    borderStyle: 'dashed',
+    borderWidth: '0 0 1px 0'
+  }
+  private enable = true
   constructor(configuration: MyConfiguration) {
     this.timer = undefined
     this.configuration = configuration
     this.decorators = Object.entries(configuration.configs)
-      .filter((config) => config[1].enable)
+      .filter((config) => config[1].enable ?? this.enable)
       .sort((a, b) => {
         console.log(a[0])
         if (
@@ -31,7 +37,9 @@ export class Decoration {
       .map((config) => {
         return {
           regex: config[1].regex,
-          decorator: window.createTextEditorDecorationType(config[1].options)
+          decorator: window.createTextEditorDecorationType(
+            config[1].options ?? this.options
+          )
         }
       })
   }
@@ -61,11 +69,13 @@ export class Decoration {
     if (configuration != null) {
       this.configuration = configuration
       this.decorators = Object.entries(configuration.configs)
-        .filter((config) => config[1].enable)
+        .filter((config) => config[1].enable ?? this.enable)
         .map((config) => {
           return {
             regex: config[1].regex,
-            decorator: window.createTextEditorDecorationType(config[1].options)
+            decorator: window.createTextEditorDecorationType(
+              config[1].options ?? this.options
+            )
           }
         })
     }
