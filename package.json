@@ -16,7 +16,7 @@
   ],
   "icon": "assets/icon.png",
   "engines": {
-    "vscode": "^1.71.0"
+    "vscode": "^1.74.0"
   },
   "activationEvents": [
     "*"
