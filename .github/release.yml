@@ -1,9 +1,10 @@
-
 changelog:
   exclude:
     labels:
       - ignore-for-release
       - tagpr
+    authors:
+      - renovate
   categories:
     - title: Fixed
       labels:
@@ -13,4 +14,4 @@ changelog:
         - enhancement
     - title: Changed
       labels:
-        - "*"
+        - '*'
