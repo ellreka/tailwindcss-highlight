@@ -1,6 +1,6 @@
 # Tailwind CSS Highlight
 
-![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/visual-image2.png)
+![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/visual-image.png)
 
 This extension highlights the utilities of TailwindCSS.
 
@@ -67,7 +67,7 @@ Set only the properties you want to override.
 #### Example: Make it a underline instead of a highlight
 
 ```json
-"tailwindcss-highlight.configs": {
+"tailwindcss-highlight.customUtilitiesConfig": {
   "padding": {
     "style": {
       "backgroundColor": "",
@@ -85,6 +85,10 @@ Set only the properties you want to override.
 ### `tailwindcss-highlight.defaultVariantsColor`
 
 Default color of the variants.
+
+```json
+"tailwindcss-highlight.defaultVariantsColor": "#1FAB89"
+```
 
 ### `tailwindcss-highlight.customVariantsConfig`
 
