@@ -26,14 +26,7 @@ type Configs = Record<
   }
 >
 
-type VariantsConfig = Record<
-  string,
-  {
-    enable: boolean
-    variants: string[]
-    color: string
-  }
->
+type VariantsConfig = Record<string, string[]>
 export interface MyConfiguration {
   configs: Configs
   /**
@@ -54,7 +47,10 @@ export class Configuration {
   }
 
   get configs(): MyConfiguration['configs'] {
-    const variants = this.configuration.get<VariantsConfig>('variants') ?? {}
+    const customVariantsConfig =
+      this.configuration.get<VariantsConfig>('customVariantsConfig') ?? {}
+    const defaultVariantsColor =
+      this.configuration.get<string>('defaultVariantsColor') ?? ''
     const customUtilitiesConfig =
       this.configuration.get<UtilitiesConfig>('customUtilitiesConfig') ?? {}
     const enabledUtilities =
@@ -71,8 +67,9 @@ export class Configuration {
         return acc
       }, {} as UtilitiesConfig)
     }
-
+    const customVariants = Object.values(customVariantsConfig).flatMap((i) => i)
     return {
+      // utilities
       ...Object.entries(config).reduce((acc, [key, value]) => {
         acc[key] = {
           enable: true,
@@ -83,16 +80,27 @@ export class Configuration {
         }
         return acc
       }, {} as Configs),
-      ...Object.entries(variants).reduce((acc, [key, value]) => {
-        acc[`variants:${key}`] = {
-          enable: value.enable,
+      // custom variants
+      ...Object.entries(customVariantsConfig).reduce((acc, [key, value]) => {
+        acc[`variants:${value.join()}`] = {
+          enable: true,
           options: {
-            color: value.color
+            color: key
           },
-          regex: `(?<=[:\`\'\"\\s])(${value.variants.join('|')}):`
+          regex: `(?<=[:\`\'\"\\s])(${value.join('|')}):`
         }
         return acc
-      }, {} as Configs)
+      }, {} as Configs),
+      // default variants
+      'variants:other': {
+        enable: true,
+        options: {
+          color: defaultVariantsColor
+        },
+        regex: `(?<=[:\`\'\"\\s])(?!(${customVariants.join(
+          '|'
+        )}))([^\`\'\"\\s]+):`
+      }
     }
   }
 }
