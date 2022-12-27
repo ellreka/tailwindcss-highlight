@@ -1,5 +1,9 @@
 # Change Log
 
+## [v2.0.0](https://github.com/ellreka/tailwindcss-highlight/compare/v1.4.1...v2.0.0) - 2022-12-27
+### Changed
+- fix: update configuration by @ellreka in https://github.com/ellreka/tailwindcss-highlight/pull/93
+
 ## [v1.4.1](https://github.com/ellreka/tailwindcss-highlight/compare/v1.4.0...v1.4.1) - 2022-09-23
 ### Changed
 - fix: fix vscode engines version by @ellreka in https://github.com/ellreka/tailwindcss-highlight/pull/77
