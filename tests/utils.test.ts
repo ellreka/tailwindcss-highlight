@@ -1,10 +1,8 @@
-import pJson from '../package.json'
+import { defaultUtilitiesConfig } from '../src/defaultConfig'
 import { getClassNames, getUtility } from '../src/utils/utils'
 import { filetext } from './filetext'
 
-const config =
-  pJson.contributes.configuration.properties['tailwindcss-highlight.configs']
-    .default
+const config = defaultUtilitiesConfig
 
 const testUtility = (regex: string): string[] => {
   const classNames = getClassNames(filetext)
