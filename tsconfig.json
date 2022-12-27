@@ -5,6 +5,8 @@
     "outDir": "out",
     "module": "commonJs",
     "target": "ES2017",
-    "lib": ["ES2020", "DOM"]
+    "lib": ["ES2020", "DOM"],
+    "sourceMap": false,
+    "declaration": false
   }
 }
