@@ -43,569 +43,68 @@
             "type": "string"
           }
         },
-        "tailwindcss-highlight.variants": {
-          "default": {
-            "responsive": {
-              "enable": true,
-              "variants": [
-                "sm",
-                "md",
-                "lg",
-                "xl",
-                "2xl"
-              ],
-              "color": "#51FFFF"
-            },
-            "other": {
-              "enable": true,
-              "variants": [
-                "hover",
-                "focus",
-                "focus-within",
-                "focus-visible",
-                "active",
-                "visited",
-                "target",
-                "first",
-                "last",
-                "only",
-                "odd",
-                "even",
-                "first-of-type",
-                "last-of-type",
-                "only-of-type",
-                "empty",
-                "disabled",
-                "enabled",
-                "checked",
-                "indeterminate",
-                "default",
-                "required",
-                "valid",
-                "invalid",
-                "in-range",
-                "out-of-range",
-                "placeholder-shown",
-                "autofill",
-                "read-only",
-                "open",
-                "before",
-                "after",
-                "first-letter",
-                "first-line",
-                "marker",
-                "selection",
-                "file",
-                "backdrop",
-                "placeholder",
-                "dark",
-                "portrait",
-                "landscape",
-                "motion-safe",
-                "motion-reduce",
-                "contrast-more",
-                "contrast-less",
-                "print",
-                "rtl",
-                "ltr"
-              ],
-              "color": "#2DF3AC"
-            }
-          },
-          "type": "object"
+        "tailwindcss-highlight.defaultVariantsColor": {
+          "default": "#1FAB89",
+          "title": "DefaultVariantsColor",
+          "type": "string",
+          "markdownDescription": "Default variants color."
         },
-        "tailwindcss-highlight.configs": {
+        "tailwindcss-highlight.customVariantsConfig": {
           "default": {
-            "padding": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(187, 196, 136, 1)"
-              }
-            },
-            "margin": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)m(|t|b|r|l|x|y)-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(173, 134, 91, 1)"
-              }
-            },
-            "space": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)space-(x|y)-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(173, 134, 91, 1)"
-              }
-            },
-            "border": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])border(?!-collapse|-separate)(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(222, 195, 138, 1)"
-              }
-            },
-            "rounded": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])rounded(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(222, 195, 138, 1)"
-              }
-            },
-            "divide": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])divide(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(222, 195, 138, 1)"
-              }
-            },
-            "ring": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])ring(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(222, 195, 138, 1)"
-              }
-            },
-            "width": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)w-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(160, 202, 222, 1)"
-              }
-            },
-            "height": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)(|max|min)(|-)h-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(230, 177, 161, 1)"
-              }
-            },
-            "flex": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|inline-)flex(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "grid": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])grid(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "order": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(|-)order-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "gridColumn": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])col(|-)[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "gridRow": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])row(|-)[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "gridAutoColumns": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])auto-cols-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "gridAutoRows": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])auto-rows-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "gap": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])gap-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "justifyContent": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])justify-(start|end|center|between|around|evenly)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "justifyItems": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])justify-items-(start|end|center|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "justifySelf": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])justify-self-(auto|start|end|center|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "alignContent": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])content-(start|end|center|between|around|evenly)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "alignItems": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])items-(start|end|center|baseline|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "alignSelf": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])self-(auto|start|end|center|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "placeContent": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])place-content-(center|start|end|between|around|evenly|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "placeItems": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])place-items-(start|end|center|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "placeSelf": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])place-self-(auto|start|end|center|stretch)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(192, 175, 224, 1)"
-              }
-            },
-            "table": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(table-fixed|table-auto|table)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 210, 105, 1)"
-              }
-            },
-            "borderCollapse": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])border-(collapse|separate)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 210, 105, 1)"
-              }
-            },
-            "transition": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])transition(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(141, 179, 184, 1)"
-              }
-            },
-            "transitionDuration": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])duration-[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(141, 179, 184, 1)"
-              }
-            },
-            "transitionTimingFunction": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])ease(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(141, 179, 184, 1)"
-              }
-            },
-            "transitionDelay": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])delay-[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(141, 179, 184, 1)"
-              }
-            },
-            "animation": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])animate-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
-            },
-            "transform": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])transform(|-)[^`'\"\\s]*",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
-            },
-            "transformOrigin": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])origin-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
-            },
-            "scale": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])scale-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
-            },
-            "rotate": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)rotate-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
-            },
-            "translate": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)translate-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
-            },
-            "skew": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(|-)skew-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(255, 176, 202, 1)"
-              }
-            },
-            "text": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])text-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
-            },
-            "textDecoration": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(underline|line-through|no-underline)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
-            },
-            "textTransform": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(uppercase|lowercase|capitalize|normal-case)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
-            },
-            "textOverflow": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(truncate|overflow-ellipsis|overflow-clip)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
-            },
-            "verticalAlign": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])align-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
-            },
-            "whitespace": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])whitespace-(normal|nowrap|pre(-line|-wrap|))",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
-            },
-            "wordBreak": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])break-(normal|words|all)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
-            },
-            "font": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])font-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
-            },
-            "fontStyle": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(italic|not-italic)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
-            },
-            "leading": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])leading-[^`'\"\\s]+",
-              "options": {
-                "enable": true,
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
-            },
-            "tracking": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])tracking-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(171, 169, 169, 1)"
-              }
-            },
-            "background": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])bg-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(117, 224, 165, 1)"
-              }
-            },
-            "gradientColorStops": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(from|via|to)-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(117, 224, 165, 1)"
-              }
-            },
-            "position": {
-              "enable": true,
-              "regex": "(?<=[:`'\"\\s])(static|fixed|absolute|relative|sticky)",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(242, 142, 111, 1)"
-              }
-            },
-            "inset": {
-              "enable": false,
-              "regex": "(?<=[:`'\"\\s])(|-)(inset|top|bottom|left|right)-[^`'\"\\s]+",
-              "options": {
-                "color": "black",
-                "borderRadius": "0.25rem",
-                "backgroundColor": "rgba(242, 142, 111, 1)"
+            "#08D9D6": [
+              "sm",
+              "md",
+              "lg",
+              "xl",
+              "2xl"
+            ]
+          },
+          "title": "CustomVariantsConfig",
+          "type": "object",
+          "markdownDescription": "Configuration for highlighting variants. [Read more...](https://github.com/ellreka/tailwindcss-highlight#tailwindcss-highlightcustomVariantsConfig)"
+        },
+        "tailwindcss-highlight.enabledUtilities": {
+          "default": [
+            "padding",
+            "margin",
+            "space",
+            "width",
+            "height",
+            "flex",
+            "grid",
+            "position"
+          ],
+          "title": "EnabledUtilities",
+          "markdownDescription": "List of utilities to highlight.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tailwindcss-highlight.customUtilitiesConfig": {
+          "default": {},
+          "title": "CustomUtilitiesConfig",
+          "markdownDescription": "Configuration for highlighting utilities. [Read more...](https://github.com/ellreka/tailwindcss-highlight#tailwindcss-highlightcustomUtilitiesConfig)",
+          "type": "object",
+          "patternProperties": {
+            "^.*$": {
+              "type": "object",
+              "properties": {
+                "regex": {
+                  "type": "string",
+                  "description": "Regex to match the utility."
+                },
+                "color": {
+                  "type": "string",
+                  "description": "Color of the highlight. Style property takes precedence."
+                },
+                "style": {
+                  "type": "object",
+                  "description": "Style of the highlight."
+                }
               }
             }
-          },
-          "title": "configs",
-          "type": "object"
+          }
         }
       }
     }
@@ -613,8 +112,6 @@
   "scripts": {
     "dev": "tsc -watch -p ./",
     "build": "rimraf ./out && tsc -p ./",
-    "package": "vsce package",
-    "vscode:publish": "vsce publish",
     "test": "jest"
   },
   "devDependencies": {

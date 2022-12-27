@@ -1,10 +1,8 @@
 # Tailwind CSS Highlight
 
-![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/visual-image2.png)
+![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/visual-image.png)
 
 This extension highlights the utilities of TailwindCSS.
-
-You can customize colors and regexes.
 
 ## Installation
 
@@ -12,7 +10,9 @@ You can customize colors and regexes.
 
 ## Development
 
-Please run debug mode on the vscode.
+1. `yarn install`
+2. `yarn dev`
+3. Run debug mode on the vscode.
 
 ## Configuration
 
@@ -33,39 +33,43 @@ List of languages to apply highlighting.
 ]
 ```
 
-### `tailwindcss-highlight.configs`
+### `tailwindcss-highlight.enabledUtilities`
 
-Configuration for highlighting utilities.
+List of utilities to highlight.
 
-| Name    | Description                 | Type                                                                                                       |
-| ------- | --------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| enable  | Whether to highlight        | `Boolean`                                                                                                  |
-| regex   | Regular expression to match | `String`                                                                                                   |
-| options | Highlight styles            | [DecorationRenderOptions](https://code.visualstudio.com/api/references/vscode-api#DecorationRenderOptions) |
+Utility name list: [src/defaultConfig.ts](https://github.com/ellreka/tailwindcss-highlight/blob/main/src/defaultConfig.ts)
 
 ```json
-"tailwindcss-highlight.configs": {
-  "padding": {
-    "enable": true,
-    "regex": "(?<=[:`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+",
-    "options": {
-      "color": "black",
-      "backgroundColor": "rgba(187, 196, 136, 1)"
-    }
-  }
-}
+"tailwindcss-highlight.enabledUtilities": [
+  "padding",
+  "margin",
+  "space",
+  "width",
+  "height",
+  "flex",
+  "grid",
+  "position"
+]
 ```
 
-#### Customization example
+### `tailwindcss-highlight.customUtilitiesConfig`
 
-##### Make it a underline instead of a highlight
+Configuration for highlighting utilities.
+Override [default config](https://github.com/ellreka/tailwindcss-highlight/blob/main/src/defaultConfig.ts).
+Set only the properties you want to override.
+
+| Name  | Description                                              | Type                                                                                                       |
+| ----- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| regex | Regex to match the utility                               | `String`                                                                                                   |
+| color | Color of the highlight. Style property takes precedence. | `String`                                                                                                   |
+| style | Highlight styles                                         | [DecorationRenderOptions](https://code.visualstudio.com/api/references/vscode-api#DecorationRenderOptions) |
+
+#### Example: Make it a underline instead of a highlight
 
 ```json
-"tailwindcss-highlight.configs": {
+"tailwindcss-highlight.customUtilitiesConfig": {
   "padding": {
-    "enable": true,
-    "regex": "(?<=[:`'\"\\s])(|-)p(|t|b|r|l|x|y)-[^`'\"\\s]+",
-    "options": {
+    "style": {
       "backgroundColor": "",
       "borderWidth": "0 0 3px 0",
       "borderStyle": "solid",
@@ -78,46 +82,43 @@ Configuration for highlighting utilities.
 
 ![](https://raw.githubusercontent.com/ellreka/tailwindcss-highlight/main/assets/example-configs.png)
 
-### `tailwindcss-highlight.variants`
+### `tailwindcss-highlight.defaultVariantsColor`
+
+Default color of the variants.
+
+```json
+"tailwindcss-highlight.defaultVariantsColor": "#1FAB89"
+```
+
+### `tailwindcss-highlight.customVariantsConfig`
 
 Configuration for highlighting variants.
 
-| Name     | Description          | Type       |
-| -------- | -------------------- | ---------- |
-| enable   | Whether to highlight | `Boolean`  |
-| variants | List of variant      | `String[]` |
-| color    | Font color code      | `String`   |
+| Name  | Description     | Type       |
+| ----- | --------------- | ---------- |
+| Key   | Color           | `String`   |
+| Value | List of variant | `String[]` |
 
 ```json
-"tailwindcss-highlight.configs": {
-  "responsive": {
-    "enable": true,
-    "variants": [
-      "sm",
-      "md",
-      "lg",
-      "xl",
-      "2xl"
-    ],
-    "color": "#51FFFF"
-  },
+"tailwindcss-highlight.customVariantsConfig": {
+  "#08D9D6": [
+    "sm",
+    "md",
+    "lg",
+    "xl",
+    "2xl"
+  ]
 }
 ```
 
-#### Customization example
-
-##### Change the color of the focus variants
+#### Example: Change the color of the focus variants
 
 ```json
-"tailwindcss-highlight.configs": {
-  "focus": {
-    "enable": true,
-    "variants": [
-      "focus",
-      "focus-within",
-      "focus-visible"
-    ],
-    "color": "#FFB6C1"
-  },
+"tailwindcss-highlight.customVariantsConfig": {
+  "#FFB6C1": [
+    "focus",
+    "focus-within",
+    "focus-visible"
+  ]
 }
 ```
