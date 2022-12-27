@@ -19,6 +19,6 @@ jobs:
         token: ${{ steps.generate_token.outputs.token }}
 
     - name: tagpr
-      uses: Songmu/tagpr@v0
+      uses: Songmu/tagpr@v1
       env:
         GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
