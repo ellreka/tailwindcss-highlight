@@ -61,7 +61,7 @@
           },
           "title": "CustomVariantsConfig",
           "type": "object",
-          "markdownDescription": "Configuration for highlighting variants. [Read more...](https://github.com/ellreka/tailwindcss-highlight#tailwindcss-highlightvariants)"
+          "markdownDescription": "Configuration for highlighting variants. [Read more...](https://github.com/ellreka/tailwindcss-highlight#tailwindcss-highlightcustomVariantsConfig)"
         },
         "tailwindcss-highlight.enabledUtilities": {
           "default": [
@@ -84,7 +84,7 @@
         "tailwindcss-highlight.customUtilitiesConfig": {
           "default": {},
           "title": "CustomUtilitiesConfig",
-          "markdownDescription": "Configuration for highlighting utilities. [Read more...](https://github.com/ellreka/tailwindcss-highlight#tailwindcss-highlightconfigs)",
+          "markdownDescription": "Configuration for highlighting utilities. [Read more...](https://github.com/ellreka/tailwindcss-highlight#tailwindcss-highlightcustomUtilitiesConfig)",
           "type": "object",
           "patternProperties": {
             "^.*$": {
@@ -112,8 +112,6 @@
   "scripts": {
     "dev": "tsc -watch -p ./",
     "build": "rimraf ./out && tsc -p ./",
-    "package": "vsce package",
-    "vscode:publish": "vsce publish",
     "test": "jest"
   },
   "devDependencies": {
