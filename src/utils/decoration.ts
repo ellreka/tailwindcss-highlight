@@ -40,7 +40,7 @@ export class Decoration {
     if (editor == null) return
     const document = editor.document
     const text = document.getText()
-    const classNames = getClassNames(text)
+    const classNames = getClassNames(text, this.configuration.classRegex)
     this.decorators.forEach((decorator) => {
       const regex = new RegExp(decorator.regex, 'g')
       const chars: DecorationOptions[] = []

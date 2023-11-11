@@ -43,6 +43,18 @@
             "type": "string"
           }
         },
+        "tailwindcss-highlight.classRegex": {
+          "default": [
+            "(?:\\b(?:class(?:Name)?|tw)\\s*=\\s*(?:(?:{([^>}]+)})|([\"'`][^\"'`]+[\"'`])))",
+            "(?:(clsx|classnames))\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)"
+          ],
+          "title": "ClassRegex",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "markdownDescription": "Regex used to detect classes to highlight."
+        },
         "tailwindcss-highlight.defaultVariantsColor": {
           "default": "#1FAB89",
           "title": "DefaultVariantsColor",

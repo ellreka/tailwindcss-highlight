@@ -33,6 +33,10 @@ export interface MyConfiguration {
    * Configure a list of languages that should be highlight.
    */
   languages: string[]
+  /**
+   * Configure the regex used to detect classes to highlight.
+   */
+  classRegex: string[]
 }
 
 export class Configuration {
@@ -44,6 +48,14 @@ export class Configuration {
 
   get languages(): MyConfiguration['languages'] {
     return this.configuration.get('languages') ?? []
+  }
+
+  get classRegex(): MyConfiguration['classRegex'] {
+    // FIXME: 正規表現だけでは様々なケースに対応できない
+    return this.configuration.get('classRegex') ?? [
+      '(?:\\b(?:class(?:Name)?|tw)\\s*=\\s*(?:(?:{([^>}]+)})|(["\'`][^"\'`]+["\'`])))',
+      '(?:(clsx|classnames))\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)'
+    ]
   }
 
   get configs(): MyConfiguration['configs'] {
