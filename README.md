@@ -33,6 +33,17 @@ List of languages to apply highlighting.
 ]
 ```
 
+### `tailwindcss-highlight.classRegex`
+
+Regex used to detect class attributes/functions that contain tailwind classes to be highlighted.
+
+```json
+"tailwindcss-highlight.classRegex": [
+  "(?:\\b(?:class(?:Name)?|tw)\\s*=\\s*(?:(?:{([^>}]+)})|([\"'`][^\"'`]+[\"'`])))",
+  "(?:(clsx|classnames))\\(([^)(]*(?:\\([^)(]*(?:\\([^)(]*(?:\\([^)(]*\\)[^)(]*)*\\)[^)(]*)*\\)[^)(]*)*)\\)"
+]
+```
+
 ### `tailwindcss-highlight.enabledUtilities`
 
 List of utilities to highlight.
