@@ -774,10 +774,10 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.1.tgz#20f18294f797f2209b5f65c8e3b5c8e8261d127c"
   integrity sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==
 
-"@types/vscode@1.74.0":
-  version "1.74.0"
-  resolved "https://registry.yarnpkg.com/@types/vscode/-/vscode-1.74.0.tgz#4adc21b4e7f527b893de3418c21a91f1e503bdcd"
-  integrity sha512-LyeCIU3jb9d38w0MXFwta9r0Jx23ugujkAxdwLTNCyspdZTKUc43t7ppPbCiPoQ/Ivd/pnDFZrb4hWd45wrsgA==
+"@types/vscode@1.87.0":
+  version "1.87.0"
+  resolved "https://registry.yarnpkg.com/@types/vscode/-/vscode-1.87.0.tgz#ee9b163f3d2115fb0b20619b34dd3abc5a923361"
+  integrity sha512-y3yYJV2esWr8LNjp3VNbSMWG7Y43jC8pCldG8YwiHGAQbsymkkMMt0aDT1xZIOFM2eFcNiUc+dJMx1+Z0UT8fg==
 
 "@types/yargs-parser@*":
   version "21.0.0"
